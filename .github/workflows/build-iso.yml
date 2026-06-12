@@ -43,12 +43,23 @@ jobs:
             live-build debootstrap squashfs-tools xorriso \
             isolinux syslinux syslinux-common syslinux-utils \
             grub-pc-bin grub-efi-amd64-bin mtools \
-            dosfstools ca-certificates curl git debian-archive-keyring procps
+            dosfstools ca-certificates curl git debian-archive-keyring procps rsync
           lb --version || true
           echo 'Free disk space:'; df -h
 
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Stage ZenvX application source into the image
+        shell: bash
+        run: |
+          set -eux
+          dest=zenvx-iso/config/includes.chroot/opt/zenvx
+          mkdir -p "$dest"
+          # Copy the entire python application tree to /opt/zenvx inside the image.
+          cp -a zenvx-os/. "$dest"/
+          echo 'Staged source tree:'
+          find "$dest" -type f | sort
 
       - name: Make build scripts executable
         working-directory: zenvx-iso
