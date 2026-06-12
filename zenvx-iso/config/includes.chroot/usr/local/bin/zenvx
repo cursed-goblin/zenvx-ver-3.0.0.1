@@ -1,0 +1,49 @@
+#!/usr/bin/env python3
+"""zenvx - launcher that checks setup state, then execs the agent."""
+import json
+import os
+import subprocess
+import sys
+
+FIRSTBOOT_DONE = "/var/lib/zenvx/.firstboot_done"
+CONFIG_JSON = "/etc/zenvx/config.json"
+CYAN = "\033[38;2;0;255;204m"
+BOLD = "\033[1m"
+RESET = "\033[0m"
+
+BANNER = CYAN + BOLD + r"""
+  ZENVX OS - Local AI Agent
+  Privacy-first. Local AI. Your machine.
+""" + RESET
+
+
+def main():
+    print(BANNER)
+
+    if not os.path.exists(FIRSTBOOT_DONE):
+        print("First-boot setup has not completed.")
+        ans = input("Run setup now? [yes/no]: ").strip().lower()
+        if ans in ("y", "yes"):
+            subprocess.run(["sudo", "zenvx-firstboot"])
+        else:
+            return 1
+
+    try:
+        with open(CONFIG_JSON) as f:
+            config = json.load(f)
+        model = config.get("models", {}).get("llm", "")
+    except (OSError, ValueError):
+        model = ""
+
+    if model and not os.path.exists(model):
+        print("Model file is missing.")
+        ans = input("Download it now? [yes/no]: ").strip().lower()
+        if ans in ("y", "yes"):
+            subprocess.run(["python3", "/usr/local/bin/zenvx-download-model"])
+
+    os.environ.setdefault("PYTHONPATH", "/opt/zenvx")
+    os.execv(sys.executable, [sys.executable, "/opt/zenvx/agent_integrated.py"])
+
+
+if __name__ == "__main__":
+    sys.exit(main())

@@ -1,0 +1,50 @@
+#!/usr/bin/env python3
+"""zenvx-firstboot - orchestrates hardware detection, model selection, download."""
+import os
+import subprocess
+import sys
+
+DONE_FLAG = "/var/lib/zenvx/.firstboot_done"
+CYAN = "\033[38;2;0;255;204m"
+BOLD = "\033[1m"
+RESET = "\033[0m"
+
+
+def step(n, total, title):
+    print(f"\n{CYAN}{BOLD}Step {n} of {total}: {title}{RESET}")
+
+
+def run(cmd):
+    return subprocess.run(cmd).returncode
+
+
+def main():
+    if os.path.exists(DONE_FLAG):
+        return 0
+
+    os.makedirs("/var/lib/zenvx", exist_ok=True)
+    print(f"{CYAN}{BOLD}Welcome to ZenvX OS first-boot setup{RESET}")
+
+    step(1, 3, "Hardware Detection")
+    run(["python3", "/usr/local/bin/zenvx-detect-hardware"])
+
+    step(2, 3, "Model Selection")
+    run(["python3", "/usr/local/bin/zenvx-model-selector"])
+
+    step(3, 3, "Model Download")
+    rc = run(["python3", "/usr/local/bin/zenvx-download-model"])
+
+    if rc == 0:
+        open(DONE_FLAG, "w").close()
+        print(f"\n{CYAN}{BOLD}Setup complete!{RESET}")
+        print("  Type 'zenvx' to talk to the agent.")
+        print("  The agent service is starting now...")
+        subprocess.run(["systemctl", "start", "zenvx-agent"])
+    else:
+        print("\nModel download did not complete. "
+              "Run 'sudo zenvx-firstboot' again once you have network.")
+    return rc
+
+
+if __name__ == "__main__":
+    sys.exit(main())

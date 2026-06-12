@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=ZenvX
+Description=ZenvX OS boot splash
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/zenvx
+ScriptFile=/usr/share/plymouth/themes/zenvx/zenvx.script

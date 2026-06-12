@@ -1,0 +1,46 @@
+# ZenvX OS GRUB theme descriptor
+# Place compiled theme under /boot/grub/themes/zenvx/theme.txt at install time.
+
+title-text: "ZENVX OS"
+title-color: "#00FFCC"
+title-font: "Terminus Regular 32"
+
+desktop-color: "#000000"
+message-color: "#AAAAAA"
+terminal-font: "Terminus Regular 16"
+
+# Subtitle
++ label {
+  top = 18%
+  left = 0
+  width = 100%
+  align = "center"
+  color = "#333333"
+  font = "Terminus Regular 14"
+  text = "Privacy-first. Local AI. Your machine."
+}
+
+# Boot menu list
++ boot_menu {
+  top = 40%
+  left = 25%
+  width = 50%
+  height = 40%
+  item_color = "#AAAAAA"
+  selected_item_color = "#00FFCC"
+  item_height = 28
+  item_spacing = 8
+  item_font = "Terminus Regular 18"
+}
+
+# Countdown timer
++ label {
+  top = 88%
+  left = 0
+  width = 100%
+  align = "center"
+  color = "#333333"
+  font = "Terminus Regular 12"
+  id = "__timeout__"
+  text = "Booting in %d seconds"
+}

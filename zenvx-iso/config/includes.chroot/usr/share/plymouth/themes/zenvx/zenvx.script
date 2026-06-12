@@ -1,0 +1,71 @@
+# ZenvX Plymouth boot splash (script module)
+
+# Pure black background
+Window.SetBackgroundTopColor(0.0, 0.0, 0.0);
+Window.SetBackgroundBottomColor(0.0, 0.0, 0.0);
+
+screen_width = Window.GetWidth();
+screen_height = Window.GetHeight();
+
+# --- Logo (cyan-green text logo on black), centered slightly above middle ---
+logo.image = Image("zenvx-logo.png");
+logo.sprite = Sprite(logo.image);
+logo.width = logo.image.GetWidth();
+logo.height = logo.image.GetHeight();
+logo.x = (screen_width - logo.width) / 2;
+logo.y = (screen_height - logo.height) / 2 - 60;
+logo.sprite.SetPosition(logo.x, logo.y, 1);
+
+# --- Tagline (dark gray) ---
+tagline.image = Image.Text("Privacy-first. Local AI. Your machine.", 0.4, 0.4, 0.4);
+tagline.sprite = Sprite(tagline.image);
+tagline.x = (screen_width - tagline.image.GetWidth()) / 2;
+tagline.y = logo.y + logo.height + 24;
+tagline.sprite.SetPosition(tagline.x, tagline.y, 1);
+
+# --- Progress bar geometry: 400 x 3 px ---
+bar.width = 400;
+bar.height = 3;
+bar.x = (screen_width - bar.width) / 2;
+bar.y = tagline.y + 40;
+
+# Background track (very dark gray 0x141414)
+bar.bg.image = Image(bar.width, bar.height);
+fun fill_rect(img, r, g, b) {
+	w = img.GetWidth();
+	h = img.GetHeight();
+	for (yy = 0; yy < h; yy++) {
+		for (xx = 0; xx < w; xx++) {
+			img.SetPixel(xx, yy, r, g, b, 1.0);
+		}
+	}
+	return img;
+}
+bar.bg.image = fill_rect(bar.bg.image, 0.078, 0.078, 0.078);
+bar.bg.sprite = Sprite(bar.bg.image);
+bar.bg.sprite.SetPosition(bar.x, bar.y, 1);
+
+progress = 0.0;
+
+fun refresh_callback() {
+	progress = progress + 0.004;
+	if (progress > 1.0) progress = 1.0;
+
+	fill.w = Math.Int(bar.width * progress);
+	if (fill.w < 1) fill.w = 1;
+	fill.image = Image(fill.w, bar.height);
+	# ZenvX cyan-green 0x00FFCC
+	fill.image = fill_rect(fill.image, 0.0, 1.0, 0.8);
+	fill.sprite = Sprite(fill.image);
+	fill.sprite.SetPosition(bar.x, bar.y, 2);
+}
+Plymouth.SetRefreshFunction(refresh_callback);
+
+# --- Boot messages below the bar in dark gray ---
+msg.sprite = Sprite();
+fun message_callback(text) {
+	msg.image = Image.Text(text, 0.4, 0.4, 0.4);
+	msg.sprite.SetImage(msg.image);
+	msg.sprite.SetPosition((screen_width - msg.image.GetWidth()) / 2, bar.y + 24, 1);
+}
+Plymouth.SetMessageFunction(message_callback);

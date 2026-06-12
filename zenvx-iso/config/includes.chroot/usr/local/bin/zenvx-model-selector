@@ -1,0 +1,116 @@
+#!/usr/bin/env python3
+"""zenvx-model-selector - interactive terminal UI to choose the AI model."""
+import json
+import os
+
+HARDWARE_JSON = "/var/lib/zenvx/hardware.json"
+CONFIG_JSON = "/etc/zenvx/config.json"
+SELECTED = "/var/lib/zenvx/selected_model"
+MODELS_DIR = "/opt/zenvx/models"
+
+CYAN = "\033[38;2;0;255;204m"
+BOLD = "\033[1m"
+DIM = "\033[2m"
+RESET = "\033[0m"
+
+MODELS = {
+    "llama3-1b-q4": {
+        "name": "Llama 3.2 - 1B (Tiny)",
+        "size": "~700 MB",
+        "min_ram": "2 GB",
+        "speed": "Fast on any hardware",
+        "desc": "The lightest model. Runs on old Pentium laptops, netbooks, and "
+                "any 2GB RAM machine. Good for basic Q&A, commands, and web "
+                "search. Not great at complex reasoning.",
+        "url": "https://huggingface.co/bartowski/Llama-3.2-1B-Instruct-GGUF/"
+               "resolve/main/Llama-3.2-1B-Instruct-Q4_K_M.gguf",
+        "file": "llama3-1b-q4.gguf",
+    },
+    "llama3-3b-q4": {
+        "name": "Llama 3.2 - 3B (Balanced)",
+        "size": "~2.0 GB",
+        "min_ram": "4 GB recommended",
+        "speed": "Medium speed",
+        "desc": "The sweet spot. Good reasoning while light enough for 4GB RAM. "
+                "Handles research, coding help, web search, e-commerce, and "
+                "multi-step planning.",
+        "url": "https://huggingface.co/bartowski/Llama-3.2-3B-Instruct-GGUF/"
+               "resolve/main/Llama-3.2-3B-Instruct-Q4_K_M.gguf",
+        "file": "llama3-3b-q4.gguf",
+    },
+    "llama3-8b-q4": {
+        "name": "Llama 3 - 8B (Full Power)",
+        "size": "~4.3 GB",
+        "min_ram": "8 GB recommended",
+        "speed": "Slower on CPU, fast with GPU",
+        "desc": "The full model. Best reasoning and best at complex multi-step "
+                "tasks. Needs 6-8 GB RAM. Excellent on an i5/Ryzen with 8GB.",
+        "url": "https://huggingface.co/bartowski/Meta-Llama-3-8B-Instruct-GGUF/"
+               "resolve/main/Meta-Llama-3-8B-Instruct-Q4_K_M.gguf",
+        "file": "llama3-8b-q4.gguf",
+    },
+}
+ORDER = ["llama3-1b-q4", "llama3-3b-q4", "llama3-8b-q4"]
+
+
+def load_json(path, default):
+    try:
+        with open(path) as f:
+            return json.load(f)
+    except (OSError, ValueError):
+        return default
+
+
+def main():
+    hw = load_json(HARDWARE_JSON, {})
+    recommended = hw.get("recommended_model", "llama3-3b-q4")
+
+    os.system("clear")
+    print(f"{CYAN}{BOLD}ZENVX OS - AI Model Selection{RESET}\n")
+    print(f"  CPU:  {hw.get('cpu_model', 'Unknown')}")
+    print(f"  RAM:  {hw.get('ram_mb', '?')} MB")
+    print(f"  GPU:  {hw.get('gpu_name') or 'none'} "
+          f"({hw.get('vram_mb', 0)} MB VRAM)")
+    print(f"  Tier: {hw.get('tier', '?')}")
+    print(f"  Recommended: {CYAN}{recommended} \u2605{RESET}\n")
+    print("\u2500" * 60)
+
+    for i, key in enumerate(ORDER, 1):
+        m = MODELS[key]
+        star = f" {CYAN}\u2605 recommended{RESET}" if key == recommended else ""
+        print(f"\n  {BOLD}[{i}] {m['name']}{RESET}{star}")
+        print(f"      Size: {m['size']}   Min RAM: {m['min_ram']}")
+        print(f"      Speed: {m['speed']}")
+        print(f"      {DIM}{m['desc']}{RESET}")
+
+    print("\n" + "\u2500" * 60)
+    default_idx = ORDER.index(recommended) + 1
+
+    while True:
+        choice = input(f"\nSelect a model [1-3, default {default_idx}]: ").strip()
+        if not choice:
+            choice = str(default_idx)
+        if choice in ("1", "2", "3"):
+            key = ORDER[int(choice) - 1]
+            confirm = input(
+                f"Download {BOLD}{MODELS[key]['name']}{RESET}? [yes/no]: "
+            ).strip().lower()
+            if confirm in ("y", "yes"):
+                break
+        print("Please enter 1, 2, or 3.")
+
+    with open(SELECTED, "w") as f:
+        f.write(key)
+
+    config = load_json(CONFIG_JSON, {})
+    config.setdefault("models", {})
+    config["models"]["llm"] = os.path.join(MODELS_DIR, MODELS[key]["file"])
+    with open(CONFIG_JSON, "w") as f:
+        json.dump(config, f, indent=2)
+
+    print(f"\n{CYAN}Selected: {MODELS[key]['name']}{RESET}")
+    return key
+
+
+if __name__ == "__main__":
+    main()

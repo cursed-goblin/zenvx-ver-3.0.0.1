@@ -1,0 +1,41 @@
+{
+  "models": {
+    "llm": "/opt/zenvx/models/llama3-8b-q4.gguf",
+    "vlm": "/opt/zenvx/models/moondream2-int4.gguf",
+    "stt": "faster-whisper"
+  },
+  "permissions": {
+    "require_approval_for_commands": true,
+    "require_approval_for_background": true,
+    "require_approval_on_startup": true,
+    "log_all_actions": true,
+    "log_path": "/var/log/zenvx/audit.log",
+    "cache_ttl_seconds": 300
+  },
+  "hardware": {
+    "max_ram_mb": 3072,
+    "inference_threads": 4,
+    "gpu_layers": 0,
+    "context_size": 2048,
+    "quantization": "q4"
+  },
+  "payment": {
+    "auto_checkout": false,
+    "requires_user_confirmation": true,
+    "upi_manual_entry_only": true
+  },
+  "performance": {
+    "cache_responses": true,
+    "streaming": true,
+    "batch_size": 1,
+    "max_tokens": 512
+  },
+  "paths": {
+    "install_dir": "/opt/zenvx",
+    "models_dir": "/opt/zenvx/models",
+    "data_dir": "/var/lib/zenvx",
+    "log_dir": "/var/log/zenvx",
+    "cache_dir": "/var/lib/zenvx/cache",
+    "metrics_dir": "/var/lib/zenvx/metrics"
+  }
+}
