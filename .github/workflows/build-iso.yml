@@ -1,0 +1,121 @@
+name: Build ZenvX OS ISO
+
+# Builds the live ISO on a GitHub-hosted Ubuntu runner using live-build,
+# then publishes zenvx-os.iso as a workflow artifact and (on tags) a release.
+
+on:
+  push:
+    branches: [main, master]
+    tags: ["v*"]
+    paths:
+      - "zenvx-iso/**"
+      - "zenvx-os/**"
+      - ".github/workflows/build-iso.yml"
+  pull_request:
+    paths:
+      - "zenvx-iso/**"
+      - "zenvx-os/**"
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: "Optional tag to publish a release under (e.g. v1.0.0)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-iso-$ github.ref 
+  cancel-in-progress: true
+
+jobs:
+  build-iso:
+    name: Build ISO (live-build)
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Free up disk space
+        run: |
+          echo "Disk before cleanup:"
+          df -h /
+          sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/lib/android \
+            /usr/local/share/boost "$AGENT_TOOLSDIRECTORY" || true
+          sudo apt-get clean
+          echo "Disk after cleanup:"
+          df -h /
+
+      - name: Install live-build toolchain
+        run: |
+          sudo apt-get update
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
+            live-build debootstrap squashfs-tools xorriso \
+            isolinux syslinux-common grub-pc-bin grub-efi-amd64-bin mtools \
+            ca-certificates curl
+          lb --version || true
+
+      - name: Build the ISO
+        working-directory: zenvx-iso
+        run: |
+          set -euxo pipefail
+          sudo lb config
+          sudo lb build 2>&1 | tee build.log
+
+      - name: Locate and rename the ISO
+        id: iso
+        working-directory: zenvx-iso
+        run: |
+          set -euo pipefail
+          ISO=$(ls -1 *.iso live-image-*.iso 2>/dev/null | head -n1 || true)
+          if [ -z "$ISO" ]; then
+            echo "No ISO produced!" >&2
+            ls -la
+            exit 1
+          fi
+          VERSION="${GITHUB_REF_NAME:-dev}"
+          OUT="zenvx-os-${VERSION}-amd64.iso"
+          mv "$ISO" "$OUT"
+          sha256sum "$OUT" > "$OUT.sha256"
+          echo "iso_name=$OUT" >> "$GITHUB_OUTPUT"
+          echo "Built: $OUT ($(du -h "$OUT" | cut -f1))"
+
+      - name: Upload ISO as workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: $ steps.iso.outputs.iso_name 
+          path: |
+            zenvx-iso/$ steps.iso.outputs.iso_name 
+            zenvx-iso/$ steps.iso.outputs.iso_name .sha256
+          retention-days: 30
+          if-no-files-found: error
+
+      - name: Upload build log on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-log
+          path: zenvx-iso/build.log
+          if-no-files-found: ignore
+
+      - name: Publish GitHub Release
+        if: startsWith(github.ref, 'refs/tags/') || github.event.inputs.release_tag != ''
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: $ github.event.inputs.release_tag || github.ref_name 
+          name: ZenvX OS $ github.event.inputs.release_tag || github.ref_name 
+          body: |
+            Automated ZenvX OS live ISO build.
+
+            - Hybrid BIOS + UEFI bootable image
+            - SHA256 checksum attached
+
+            Flash with:
+            `sudo dd if=zenvx-os-*.iso of=/dev/sdX bs=4M status=progress oflag=sync`
+          files: |
+            zenvx-iso/$ steps.iso.outputs.iso_name 
+            zenvx-iso/$ steps.iso.outputs.iso_name .sha256
+          fail_on_unmatched_files: true
