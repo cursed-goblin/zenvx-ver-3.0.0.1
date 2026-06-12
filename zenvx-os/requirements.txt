@@ -1,0 +1,12 @@
+# ZenvX agent Python dependencies (installed in the chroot with
+# pip install --break-system-packages -r requirements.txt)
+llama-cpp-python
+playwright
+faster-whisper
+duckduckgo-search
+cryptography
+psutil
+mss
+Pillow
+sounddevice
+soundfile
