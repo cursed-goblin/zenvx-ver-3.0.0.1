@@ -46,8 +46,16 @@ jobs:
           sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
             live-build debootstrap squashfs-tools xorriso \
             isolinux syslinux-common grub-pc-bin grub-efi-amd64-bin mtools \
-            ca-certificates curl
+            debian-archive-keyring ca-certificates curl
           lb --version || true
+
+      - name: Make build scripts executable
+        working-directory: zenvx-iso
+        run: |
+          chmod +x auto/config auto/build auto/clean || true
+          find config/hooks -type f -name "*.hook.*" -print0 | xargs -0r chmod +x || true
+          find config/includes.chroot/usr/local/bin -type f -print0 | xargs -0r chmod +x || true
+          find config/includes.chroot/usr/share/plymouth -type f -name "*.script" -print0 | xargs -0r chmod +x || true
 
       - name: Build the ISO
         working-directory: zenvx-iso
