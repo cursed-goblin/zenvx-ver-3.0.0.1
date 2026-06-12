@@ -1,7 +1,7 @@
 name: Build ZenvX OS ISO
 
 # Builds the live ISO on a GitHub-hosted Ubuntu runner using live-build,
-# then publishes zenvx-os.iso as a workflow artifact and (on tags) a release.
+# then publishes the ISO as a workflow artifact and (on tags) a release.
 
 on:
   push:
@@ -16,18 +16,9 @@ on:
       - "zenvx-iso/**"
       - "zenvx-os/**"
   workflow_dispatch:
-    inputs:
-      release_tag:
-        description: "Optional tag to publish a release under (e.g. v1.0.0)"
-        required: false
-        default: ""
 
 permissions:
   contents: write
-
-concurrency:
-  group: build-iso-$ github.ref 
-  cancel-in-progress: true
 
 jobs:
   build-iso:
@@ -66,7 +57,6 @@ jobs:
           sudo lb build 2>&1 | tee build.log
 
       - name: Locate and rename the ISO
-        id: iso
         working-directory: zenvx-iso
         run: |
           set -euo pipefail
@@ -80,16 +70,15 @@ jobs:
           OUT="zenvx-os-${VERSION}-amd64.iso"
           mv "$ISO" "$OUT"
           sha256sum "$OUT" > "$OUT.sha256"
-          echo "iso_name=$OUT" >> "$GITHUB_OUTPUT"
           echo "Built: $OUT ($(du -h "$OUT" | cut -f1))"
 
       - name: Upload ISO as workflow artifact
         uses: actions/upload-artifact@v4
         with:
-          name: $ steps.iso.outputs.iso_name 
+          name: zenvx-os-iso
           path: |
-            zenvx-iso/$ steps.iso.outputs.iso_name 
-            zenvx-iso/$ steps.iso.outputs.iso_name .sha256
+            zenvx-iso/*.iso
+            zenvx-iso/*.iso.sha256
           retention-days: 30
           if-no-files-found: error
 
@@ -102,11 +91,14 @@ jobs:
           if-no-files-found: ignore
 
       - name: Publish GitHub Release
-        if: startsWith(github.ref, 'refs/tags/') || github.event.inputs.release_tag != ''
+        if: startsWith(github.ref, 'refs/tags/')
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: $ github.event.inputs.release_tag || github.ref_name 
-          name: ZenvX OS $ github.event.inputs.release_tag || github.ref_name 
+          files: |
+            zenvx-iso/*.iso
+            zenvx-iso/*.iso.sha256
+          fail_on_unmatched_files: true
+          generate_release_notes: true
           body: |
             Automated ZenvX OS live ISO build.
 
@@ -115,7 +107,3 @@ jobs:
 
             Flash with:
             `sudo dd if=zenvx-os-*.iso of=/dev/sdX bs=4M status=progress oflag=sync`
-          files: |
-            zenvx-iso/$ steps.iso.outputs.iso_name 
-            zenvx-iso/$ steps.iso.outputs.iso_name .sha256
-          fail_on_unmatched_files: true
