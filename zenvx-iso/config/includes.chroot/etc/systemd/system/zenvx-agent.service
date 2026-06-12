@@ -1,0 +1,23 @@
+[Unit]
+Description=ZenvX Autonomous AI Agent
+After=zenvx-firstboot.service network-online.target
+Requires=zenvx-firstboot.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=zenvx
+Group=zenvx
+WorkingDirectory=/opt/zenvx
+ExecStart=/usr/bin/python3 /opt/zenvx/agent_integrated.py
+Restart=on-failure
+RestartSec=10
+StandardOutput=append:/var/log/zenvx/agent.log
+StandardError=append:/var/log/zenvx/error.log
+Environment=PYTHONUNBUFFERED=1
+Environment=PYTHONPATH=/opt/zenvx
+MemoryMax=5G
+CPUWeight=50
+
+[Install]
+WantedBy=multi-user.target

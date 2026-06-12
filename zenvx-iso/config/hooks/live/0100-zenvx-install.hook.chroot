@@ -1,0 +1,93 @@
+#!/bin/sh
+# 0100-zenvx-install.hook.chroot
+# Runs inside the live chroot during the ISO build.
+# Creates the zenvx user, directories, installs python deps, enables services.
+set -e
+
+echo "[zenvx 0100] creating system user and groups"
+if ! id zenvx >/dev/null 2>&1; then
+	useradd --create-home --shell /bin/bash zenvx
+fi
+for grp in sudo audio video plugdev netdev; do
+	getent group "$grp" >/dev/null 2>&1 || groupadd "$grp"
+	usermod -aG "$grp" zenvx
+done
+# Passwordless in live mode
+passwd -d zenvx || true
+
+echo "[zenvx 0100] writing sudoers rule"
+install -d -m 0755 /etc/sudoers.d
+printf 'zenvx ALL=(ALL) NOPASSWD:ALL\n' > /etc/sudoers.d/zenvx
+chmod 0440 /etc/sudoers.d/zenvx
+
+echo "[zenvx 0100] creating directory tree"
+install -d -m 0755 /opt/zenvx /opt/zenvx/models /opt/zenvx/inference /opt/zenvx/tools /opt/zenvx/monitoring
+install -d -m 0750 /var/lib/zenvx /var/lib/zenvx/cache /var/lib/zenvx/conversations /var/lib/zenvx/metrics
+install -d -m 0750 /var/log/zenvx
+install -d -m 0755 /etc/zenvx /usr/share/zenvx
+
+echo "[zenvx 0100] installing default config"
+if [ -f /usr/share/zenvx/config.default.json ]; then
+	cp /usr/share/zenvx/config.default.json /etc/zenvx/config.json
+fi
+ln -sf /etc/zenvx/config.json /opt/zenvx/config.json
+
+echo "[zenvx 0100] ensuring python package markers"
+for pkg in inference tools monitoring; do
+	[ -f "/opt/zenvx/$pkg/__init__.py" ] || touch "/opt/zenvx/$pkg/__init__.py"
+done
+
+echo "[zenvx 0100] installing python dependencies"
+pip3 install --no-cache-dir --break-system-packages \
+	llama-cpp-python \
+	playwright \
+	faster-whisper \
+	duckduckgo-search \
+	cryptography \
+	psutil \
+	mss \
+	Pillow \
+	sounddevice \
+	soundfile || echo "[zenvx 0100] WARNING: some pip packages failed; agent will fall back to mock modes"
+
+echo "[zenvx 0100] installing playwright chromium"
+playwright install --with-deps chromium || echo "[zenvx 0100] WARNING: playwright chromium install failed"
+
+echo "[zenvx 0100] setting ownership and permissions"
+chown -R zenvx:zenvx /opt/zenvx /var/lib/zenvx /var/log/zenvx
+chmod 0755 /opt/zenvx
+chmod 0750 /var/lib/zenvx /var/log/zenvx
+if [ -d /usr/local/bin ]; then
+	for f in /usr/local/bin/zenvx /usr/local/bin/zenvx-*; do
+		[ -e "$f" ] && chmod 0755 "$f"
+	done
+fi
+
+echo "[zenvx 0100] enabling systemd units"
+systemctl enable zenvx-firstboot.service || true
+systemctl enable zenvx-agent.service || true
+systemctl enable zenvx-log-manager.timer || true
+
+echo "[zenvx 0100] configuring autologin on tty1"
+install -d -m 0755 /etc/systemd/system/getty@tty1.service.d
+
+echo "[zenvx 0100] setting plymouth theme"
+if command -v plymouth-set-default-theme >/dev/null 2>&1; then
+	plymouth-set-default-theme zenvx || true
+fi
+update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth \
+	/usr/share/plymouth/themes/zenvx/zenvx.plymouth 200 || true
+
+echo "[zenvx 0100] locale, console font, hostname"
+sed -i 's/^# *en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen || echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen
+locale-gen || true
+echo 'LANG=en_US.UTF-8' > /etc/default/locale
+if [ -f /etc/default/console-setup ]; then
+	sed -i 's/^FONTFACE=.*/FONTFACE="Terminus"/' /etc/default/console-setup || true
+	sed -i 's/^FONTSIZE=.*/FONTSIZE="16"/' /etc/default/console-setup || true
+fi
+setupcon --save-only 2>/dev/null || true
+echo 'zenvx' > /etc/hostname
+grep -q '127.0.1.1' /etc/hosts || echo '127.0.1.1 zenvx' >> /etc/hosts
+
+echo "[zenvx 0100] done"

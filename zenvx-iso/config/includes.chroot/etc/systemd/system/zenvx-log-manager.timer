@@ -1,0 +1,10 @@
+[Unit]
+Description=ZenvX Log Manager Timer
+
+[Timer]
+OnBootSec=10min
+OnUnitActiveSec=1h
+Persistent=yes
+
+[Install]
+WantedBy=timers.target

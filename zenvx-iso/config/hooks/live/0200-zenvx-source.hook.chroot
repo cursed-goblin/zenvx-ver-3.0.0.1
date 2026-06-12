@@ -1,0 +1,55 @@
+#!/bin/sh
+# 0200-zenvx-source.hook.chroot
+# Runs after includes.chroot files have been copied into the image.
+# Validates that all ZenvX python source is present and compiles.
+set -e
+
+echo "[zenvx 0200] verifying required source files"
+REQUIRED="\
+/opt/zenvx/agent_integrated.py \
+/opt/zenvx/inference/llm_engine.py \
+/opt/zenvx/inference/memory_manager.py \
+/opt/zenvx/inference/conversation_manager.py \
+/opt/zenvx/inference/tool_chain.py \
+/opt/zenvx/inference/error_recovery.py \
+/opt/zenvx/inference/cache_manager.py \
+/opt/zenvx/inference/sensory_pipeline.py \
+/opt/zenvx/inference/streaming.py \
+/opt/zenvx/inference/persistence.py \
+/opt/zenvx/inference/undo_manager.py \
+/opt/zenvx/tools/executor.py \
+/opt/zenvx/tools/permission_handler.py \
+/opt/zenvx/tools/logger.py \
+/opt/zenvx/tools/web_browser.py \
+/opt/zenvx/tools/web_search.py \
+/opt/zenvx/tools/ecommerce_handler.py \
+/opt/zenvx/tools/request_limiter.py \
+/opt/zenvx/tools/session_manager.py \
+/opt/zenvx/tools/payment_handler.py \
+/opt/zenvx/monitoring/metrics_collector.py \
+/opt/zenvx/monitoring/log_manager.py \
+/opt/zenvx/monitoring/integration.py \
+/opt/zenvx/monitoring/dashboard.py"
+
+missing=0
+for f in $REQUIRED; do
+	if [ ! -f "$f" ]; then
+		echo "[zenvx 0200] MISSING: $f"
+		missing=1
+	fi
+done
+if [ "$missing" -ne 0 ]; then
+	echo "[zenvx 0200] ERROR: required source files missing" >&2
+	exit 1
+fi
+
+echo "[zenvx 0200] byte-compiling all python sources"
+find /opt/zenvx -name '*.py' -print0 | while IFS= read -r -d '' f; do
+	python3 -m py_compile "$f"
+done
+
+echo "[zenvx 0200] setting final ownership"
+chown -R zenvx:zenvx /opt/zenvx
+chmod +x /opt/zenvx/agent_integrated.py
+
+echo "[zenvx 0200] done"

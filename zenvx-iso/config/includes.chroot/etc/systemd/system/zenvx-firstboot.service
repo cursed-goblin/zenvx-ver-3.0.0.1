@@ -1,0 +1,17 @@
+[Unit]
+Description=ZenvX OS First Boot Setup
+After=network-online.target
+Wants=network-online.target
+ConditionPathExists=!/var/lib/zenvx/.firstboot_done
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+User=root
+ExecStart=/usr/bin/python3 /usr/local/bin/zenvx-firstboot
+StandardInput=tty
+StandardOutput=tty
+TTYPath=/dev/tty1
+
+[Install]
+WantedBy=multi-user.target

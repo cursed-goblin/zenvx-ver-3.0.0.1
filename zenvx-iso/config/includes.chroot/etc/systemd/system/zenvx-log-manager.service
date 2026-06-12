@@ -1,0 +1,9 @@
+[Unit]
+Description=ZenvX Log Manager
+
+[Service]
+Type=oneshot
+User=zenvx
+Group=zenvx
+Environment=PYTHONPATH=/opt/zenvx
+ExecStart=/usr/bin/python3 -c "import json; from monitoring.log_manager import LogManager; LogManager(json.load(open('/etc/zenvx/config.json'))).run_maintenance()"

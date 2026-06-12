@@ -1,0 +1,23 @@
+#!/bin/sh
+# 9999-cleanup.hook.chroot
+# Final cleanup to shrink the ISO.
+set -e
+
+echo "[zenvx 9999] removing python caches"
+find /opt/zenvx -type d -name '__pycache__' -prune -exec rm -rf {} + 2>/dev/null || true
+find /opt/zenvx -type f -name '*.pyc' -delete 2>/dev/null || true
+
+echo "[zenvx 9999] removing pip caches"
+rm -rf /root/.cache/pip /home/zenvx/.cache/pip 2>/dev/null || true
+
+echo "[zenvx 9999] apt cleanup"
+apt-get clean
+rm -rf /var/lib/apt/lists/* 2>/dev/null || true
+
+echo "[zenvx 9999] truncating build logs"
+find /var/log -type f -exec truncate -s 0 {} + 2>/dev/null || true
+
+echo "[zenvx 9999] clearing temp"
+rm -rf /tmp/* /var/tmp/* 2>/dev/null || true
+
+echo "[zenvx 9999] done"
