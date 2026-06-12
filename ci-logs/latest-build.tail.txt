@@ -1,569 +1,4 @@
--mediawiki git-svn nvidia-driver | nvidia-driver-any parcimonie
-  xloadimage scdaemon multiboot-doc grub-emu mtools xorriso desktop-base gvfs
-  strace i965-va-driver-shaders libxml-dumper-perl isoquery apache2 | lighttpd
-  | httpd lrzip libcuda1 libnvcuvid1 libnvidia-encode1 libbluray-bdj glibc-doc
-  bzr libfftw3-bin libfftw3-dev fuse libgd-tools gdbm-l10n low-memory-monitor
-  libvisual-0.4-plugins gstreamer1.0-tools jackd2 liblcms2-utils mmdb-bin
-  libportaudio2 opus-tools libparted-dev libparted-i18n pcscd libraw1394-doc
-  librsvg2-bin libsasl2-modules-gssapi-mit | libsasl2-modules-gssapi-heimdal
-  libsasl2-modules-ldap libsasl2-modules-otp libsasl2-modules-sql xdg-utils
-  serdi sndiod sordi speex libstdc++-12-doc linux-doc-6.1
-  debian-kernel-handbook curlftpfs httpfs2 debian-installer-launcher eject
-  fancontrol read-edid i2c-tools make-doc man-browser libteam-utils iptables
-  opencl-icd keychain libpam-ssh monkeysphere ssh-askpass parted-doc ed
-  diffutils-doc perl-doc libterm-readline-gnu-perl
-  | libterm-readline-perl-perl libtap-harness-archive-perl pinentry-doc
-  polkitd-pkla pavumeter pavucontrol paprefs avahi-daemon python3-doc
-  python3-tk python-setuptools-doc python3.11-doc binfmt-support
-  openssh-server python3-braceexpand sgml-base-doc comgt wvdial
-  nvidia-vdpau-driver nvidia-tesla-440-vdpau-driver
-  nvidia-tesla-418-vdpau-driver nvidia-legacy-390xx-vdpau-driver
-  nvidia-legacy-340xx-vdpau-driver wpagui libengine-pkcs11-openssl nickle
-  cairo-5c xorg-docs-core debhelper
-The following NEW packages will be installed:
-  alsa-topology-conf alsa-ucm-conf alsa-utils amd64-microcode apparmor
-  atmel-firmware bash-completion bind9-dnsutils bind9-host bind9-libs binutils
-  binutils-common binutils-x86-64-linux-gnu bluez-firmware build-essential
-  busybox bzip2 ca-certificates cmake cmake-data console-setup
-  console-setup-linux cpp cpp-12 cryptsetup cryptsetup-bin curl
-  dahdi-firmware-nonfree dbus dbus-bin dbus-daemon dbus-session-bus-common
-  dbus-system-bus-common dbus-user-session dirmngr dns-root-data dnsmasq-base
-  dnsutils dosfstools dpkg-dev efibootmgr fakeroot ffmpeg file
-  firmware-amd-graphics firmware-ast firmware-ath9k-htc firmware-atheros
-  firmware-bnx2 firmware-bnx2x firmware-brcm80211 firmware-cavium
-  firmware-intel-sound firmware-ipw2x00 firmware-ivtv firmware-iwlwifi
-  firmware-libertas firmware-linux-free firmware-linux-nonfree
-  firmware-misc-nonfree firmware-myricom firmware-netronome firmware-netxen
-  firmware-nvidia-gsp firmware-nvidia-tesla-535-gsp firmware-nvidia-tesla-gsp
-  firmware-qcom-soc firmware-qlogic firmware-realtek
-  firmware-realtek-rtl8723cs-bt firmware-samsung firmware-siano
-  firmware-sof-signed firmware-ti-connectivity firmware-zd1211 fontconfig
-  fontconfig-config fonts-cantarell fonts-dejavu-core fonts-terminus fxload
-  g++ g++-12 gcc gcc-12 gettext-base git git-man glx-alternative-mesa
-  glx-alternative-nvidia glx-diversions gnupg gnupg-l10n gnupg-utils gpg
-  gpg-agent gpg-wks-client gpg-wks-server gpgconf gpgsm grub-common
-  grub-efi-amd64 grub-efi-amd64-bin grub-efi-amd64-signed grub-pc-bin
-  grub2-common gstreamer1.0-plugins-base hdmi2usb-fx2-firmware htop
-  i965-va-driver indi-dsi initramfs-tools initramfs-tools-core
-  intel-media-va-driver intel-microcode inxi iso-codes iucode-tool iw
-  ixo-usb-jtag javascript-common kbd keyboard-configuration klibc-utils
-  libaacs0 libabsl20220623 libalgorithm-diff-perl libalgorithm-diff-xs-perl
-  libalgorithm-merge-perl libaom3 libarchive13 libasan8 libasound2
-  libasound2-data libasound2-plugins libass9 libassuan0 libasyncns0 libatomic1
-  libatopology2 libavc1394-0 libavcodec59 libavdevice59 libavfilter8
-  libavformat59 libavif15 libavutil57 libbdplus0 libbinutils libblas3
-  libbluetooth3 libbluray2 libbrotli1 libbs2b0 libc-dev-bin libc-devtools
-  libc-l10n libc6-dev libcaca0 libcairo-gobject2 libcairo2 libcbor0.8 libcc1-0
-  libcdio-cdda2 libcdio-paranoia2 libcdio19 libcdparanoia0 libcfitsio10
-  libchromaprint1 libcjson1 libcodec2-1.0 libcrypt-dev libctf-nobfd0 libctf0
-  libcurl3-gnutls libcurl4 libdatrie1 libdav1d6 libdbus-1-3 libdc1394-25
-  libde265-0 libdecor-0-0 libdecor-0-plugin-1-cairo libdeflate0 libdpkg-perl
-  libdrm-amdgpu1 libdrm-common libdrm-intel1 libdrm-nouveau2 libdrm-radeon1
-  libdrm2 libduktape207 libdw1 libefiboot1 libefivar1 libegl-mesa0 libegl1
-  libepoxy0 liberror-perl libevent-core-2.1-7 libexpat1 libexpat1-dev
-  libfakeroot libfftw3-double3 libfftw3-single3 libfido2-1
-  libfile-fcntllock-perl libfishcamp1 libflac12 libflite1 libfontconfig1
-  libfontenc1 libfreetype6 libfribidi0 libfstrm0 libfuse2 libgav1-1 libgbm1
-  libgcc-12-dev libgd3 libgdbm-compat4 libgdbm6 libgdk-pixbuf-2.0-0
-  libgdk-pixbuf2.0-bin libgdk-pixbuf2.0-common libgfortran5 libgl1
-  libgl1-mesa-dri libglapi-mesa libgles2 libglib2.0-0 libglib2.0-data
-  libglvnd0 libglx-mesa0 libglx0 libgme0 libgomp1 libgprofng0 libgraphite2-3
-  libgsm1 libgstreamer-plugins-base1.0-0 libgstreamer1.0-0 libgudev-1.0-0
-  libharfbuzz0b libheif1 libhwy1 libice6 libicu72 libiec61883-0 libigdgmm12
-  libindi-data libindidriver1 libisl23 libitm1 libiw30 libjack-jackd2-0
-  libjbig0 libjemalloc2 libjim0.81 libjpeg62-turbo libjs-jquery
-  libjs-sphinxdoc libjs-underscore libjsoncpp25 libjxl0.7 libklibc libksba8
-  liblapack3 liblcms2-2 libldap-2.5-0 libldap-common liblerc4 liblilv-0-0
-  libllvm15 liblmdb0 liblsan0 libltdl7 libmagic-mgc libmagic1 libmaxminddb0
-  libmbedcrypto7 libmbim-glib4 libmbim-proxy libmbim-utils libmfx1 libmm-glib0
-  libmp3lame0 libmpc3 libmpfr6 libmpg123-0 libmysofa1 libndp0
-  libnetfilter-conntrack3 libnfnetlink0 libnghttp2-14 libnl-3-200
-  libnl-genl-3-200 libnl-route-3-200 libnm0 libnorm1 libnova-0.16-0 libnpth0
-  libnsl-dev libnsl2 libnuma1 libogg0 libopenal-data libopenal1 libopenjp2-7
-  libopenmpt0 libopus0 liborc-0.4-0 libpam-systemd libpango-1.0-0
-  libpangocairo-1.0-0 libpangoft2-1.0-0 libparted2 libpcap0.8 libpci3
-  libpciaccess0 libpcsclite1 libperl5.36 libpgm-5.3-0 libpixman-1-0
-  libplacebo208 libplymouth5 libpng16-16 libpocketsphinx3 libpolkit-agent-1-0
-  libpolkit-gobject-1-0 libpostproc56 libprotobuf-c1 libpsl5 libpulse0
-  libpulsedsp libpython3-dev libpython3-stdlib libpython3.11 libpython3.11-dev
-  libpython3.11-minimal libpython3.11-stdlib libqmi-glib5 libqmi-proxy
-  libqmi-utils libqrtr-glib0 libquadmath0 librabbitmq4 librav1e0 libraw1394-11
-  librhash0 librist4 librsvg2-2 librsvg2-common librtmp1 librubberband2
-  libsamplerate0 libsasl2-2 libsasl2-modules libsasl2-modules-db libsbig4
-  libsdl2-2.0-0 libsensors-config libsensors5 libserd-0-0 libshine3 libsm6
-  libsnappy1v5 libsndfile1 libsndio7.0 libsodium23 libsord-0-0 libsoxr0
-  libspeex1 libspeexdsp1 libsphinxbase3 libsqlite3-0 libsratom-0-0
-  libsrt1.5-gnutls libssh-gcrypt-4 libssh2-1 libstdc++-12-dev libsvtav1enc1
-  libswresample4 libswscale6 libtdb1 libteamdctl0 libthai-data libthai0
-  libtheora0 libtiff6 libtirpc-dev libtsan2 libtwolame0 libubsan1 libudfread0
-  libunwind8 libusb-1.0-0 libutempter0 libuv1 libva-drm2 libva-x11-2 libva2
-  libvdpau-va-gl1 libvdpau1 libvidstab1.1 libvisual-0.4-0 libvorbis0a
-  libvorbisenc2 libvorbisfile3 libvpx7 libvulkan1 libwayland-client0
-  libwayland-cursor0 libwayland-egl1 libwayland-server0 libwebp7 libwebpmux3
-  libwebrtc-audio-processing1 libwrap0 libx11-6 libx11-data libx11-xcb1
-  libx264-164 libx265-199 libxau6 libxaw7 libxcb-dri2-0 libxcb-dri3-0
-  libxcb-glx0 libxcb-present0 libxcb-randr0 libxcb-render0 libxcb-shape0
-  libxcb-shm0 libxcb-sync1 libxcb-xfixes0 libxcb1 libxcomposite1 libxcursor1
-  libxdmcp6 libxext6 libxfixes3 libxft2 libxi6 libxinerama1 libxkbcommon0
-  libxkbfile1 libxml2 libxmu6 libxmuu1 libxpm4 libxrandr2 libxrender1
-  libxshmfence1 libxss1 libxt6 libxtst6 libxv1 libxvidcore4 libxxf86dga1
-  libxxf86vm1 libyuv0 libz3-4 libzimg2 libzmq5 libzvbi-common libzvbi0
-  linux-base linux-image-6.1.0-49-amd64 linux-image-amd64 linux-libc-dev
-  live-boot live-boot-doc live-boot-initramfs-tools live-config
-  live-config-doc live-config-systemd live-tools lm-sensors locales lsof make
-  manpages manpages-dev media-types mesa-utils mesa-utils-bin mesa-va-drivers
-  mesa-vdpau-drivers mesa-vulkan-drivers modemmanager mokutil net-tools
-  network-manager nvidia-detect nvidia-installer-cleanup nvidia-kernel-common
-  nvidia-modprobe nvidia-tesla-470-alternative nvidia-tesla-470-kernel-support
-  ocl-icd-libopencl1 openssh-client openssl os-prober parted patch pci.ids
-  pciutils perl perl-modules-5.36 pinentry-curses plymouth plymouth-label
-  plymouth-themes pocketsphinx-en-us polkitd ppp publicsuffix pulseaudio
-  pulseaudio-utils python3 python3-dev python3-distutils python3-lib2to3
-  python3-minimal python3-pip python3-pip-whl python3-pkg-resources
-  python3-setuptools python3-setuptools-whl python3-venv python3-wheel
-  python3.11 python3.11-dev python3.11-minimal python3.11-venv raspi-firmware
-  rpcsvc-proto rsync rtkit sgml-base shared-mime-info
-  shim-helpers-amd64-signed shim-signed shim-signed-common shim-unsigned sudo
-  tmux tree ucf unzip update-glx usb-modeswitch usb-modeswitch-data usbutils
-  user-setup uuid-runtime va-driver-all vdpau-driver-all wget wireless-regdb
-  wireless-tools wpasupplicant x11-common x11-utils x11-xserver-utils xauth
-  xdg-user-dirs xkb-data xml-core xz-utils zip zlib1g-dev zstd
-0 upgraded, 574 newly installed, 0 to remove and 0 not upgraded.
-Need to get 719 MB of archives.
-After this operation, 2693 MB of additional disk space will be used.
-Get:1 http://deb.debian.org/debian bookworm/main amd64 libdbus-1-3 amd64 1.14.10-1~deb12u1 [201 kB]
-Get:2 http://security.debian.org/debian-security bookworm-security/main amd64 libavutil57 amd64 7:5.1.9-0+deb12u1 [373 kB]
-Get:3 http://deb.debian.org/debian bookworm/main amd64 dbus-bin amd64 1.14.10-1~deb12u1 [105 kB]
-Get:4 http://deb.debian.org/debian bookworm/main amd64 dbus-session-bus-common all 1.14.10-1~deb12u1 [78.2 kB]
-Get:5 http://deb.debian.org/debian bookworm/main amd64 libexpat1 amd64 2.5.0-1+deb12u2 [99.9 kB]
-Get:6 http://deb.debian.org/debian bookworm/main amd64 dbus-daemon amd64 1.14.10-1~deb12u1 [184 kB]
-Get:7 http://deb.debian.org/debian bookworm/main amd64 dbus-system-bus-common all 1.14.10-1~deb12u1 [79.3 kB]
-Get:8 http://deb.debian.org/debian bookworm/main amd64 dbus amd64 1.14.10-1~deb12u1 [97.4 kB]
-Get:9 http://deb.debian.org/debian bookworm/main amd64 perl-modules-5.36 all 5.36.0-7+deb12u3 [2815 kB]
-Get:10 http://security.debian.org/debian-security bookworm-security/main amd64 libopenjp2-7 amd64 2.5.0-2+deb12u3 [189 kB]
-Get:11 http://security.debian.org/debian-security bookworm-security/main amd64 libswresample4 amd64 7:5.1.9-0+deb12u1 [107 kB]
-Get:12 http://security.debian.org/debian-security bookworm-security/main amd64 libavcodec59 amd64 7:5.1.9-0+deb12u1 [5229 kB]
-Get:13 http://deb.debian.org/debian bookworm/main amd64 libgdbm6 amd64 1.23-3 [72.2 kB]
-Get:14 http://deb.debian.org/debian bookworm/main amd64 libgdbm-compat4 amd64 1.23-3 [48.2 kB]
-Get:15 http://deb.debian.org/debian bookworm/main amd64 libperl5.36 amd64 5.36.0-7+deb12u3 [4196 kB]
-Get:16 http://security.debian.org/debian-security bookworm-security/main amd64 rsync amd64 3.2.7-1+deb12u5 [425 kB]
-Get:17 http://deb.debian.org/debian bookworm/main amd64 perl amd64 5.36.0-7+deb12u3 [239 kB]
-Get:18 http://deb.debian.org/debian bookworm/main amd64 kbd amd64 2.5.1-1+b1 [335 kB]
-Get:19 http://security.debian.org/debian-security bookworm-security/main amd64 libnghttp2-14 amd64 1.52.0-1+deb12u3 [72.4 kB]
-Get:20 http://security.debian.org/debian-security bookworm-security/main amd64 bind9-libs amd64 1:9.18.49-1~deb12u1 [1182 kB]
-Get:21 http://deb.debian.org/debian bookworm/main amd64 xkb-data all 2.35.1-1 [764 kB]
-Get:22 http://deb.debian.org/debian bookworm/main amd64 keyboard-configuration all 1.221 [416 kB]
-Get:23 http://security.debian.org/debian-security bookworm-security/main amd64 bind9-host amd64 1:9.18.49-1~deb12u1 [55.0 kB]
-Get:24 http://security.debian.org/debian-security bookworm-security/main amd64 bind9-dnsutils amd64 1:9.18.49-1~deb12u1 [156 kB]
-Get:25 http://deb.debian.org/debian bookworm/main amd64 console-setup-linux all 1.221 [1882 kB]
-Get:26 http://security.debian.org/debian-security bookworm-security/main amd64 openssl amd64 3.0.20-1~deb12u2 [1439 kB]
-Get:27 http://security.debian.org/debian-security bookworm-security/main amd64 linux-libc-dev amd64 6.1.174-1 [2272 kB]
-Get:28 http://deb.debian.org/debian bookworm/main amd64 console-setup all 1.221 [102 kB]
-Get:29 http://security.debian.org/debian-security bookworm-security/main amd64 dnsutils all 1:9.18.49-1~deb12u1 [11.5 kB]
-Get:30 http://deb.debian.org/debian bookworm/non-free-firmware amd64 firmware-ipw2x00 all 20230210-5 [280 kB]
-Get:31 http://security.debian.org/debian-security bookworm-security/main amd64 libavformat59 amd64 7:5.1.9-0+deb12u1 [1114 kB]
-Get:32 http://deb.debian.org/debian bookworm/non-free-firmware amd64 firmware-ivtv all 20230210-5 [138 kB]
-Get:33 http://deb.debian.org/debian bookworm/contrib amd64 update-glx amd64 1.2.2 [5432 B]
-Get:34 http://deb.debian.org/debian bookworm/contrib amd64 glx-alternative-mesa amd64 1.2.2 [4760 B]
-Get:35 http://deb.debian.org/debian bookworm/contrib amd64 nvidia-installer-cleanup amd64 20220217+3~deb12u1 [13.3 kB]
-Get:36 http://deb.debian.org/debian bookworm/contrib amd64 glx-diversions amd64 1.2.2 [7408 B]
-Get:37 http://security.debian.org/debian-security bookworm-security/main amd64 libpostproc56 amd64 7:5.1.9-0+deb12u1 [103 kB]
-Get:38 http://security.debian.org/debian-security bookworm-security/main amd64 libswscale6 amd64 7:5.1.9-0+deb12u1 [225 kB]
-Get:39 http://deb.debian.org/debian bookworm/contrib amd64 glx-alternative-nvidia amd64 1.2.2 [5776 B]
-Get:40 http://deb.debian.org/debian bookworm/non-free amd64 nvidia-tesla-470-alternative amd64 470.256.02-1~deb12u1 [132 kB]
-Get:41 http://deb.debian.org/debian bookworm/main amd64 libasound2-data all 1.2.8-1 [20.5 kB]
-Get:42 http://security.debian.org/debian-security bookworm-security/main amd64 libavfilter8 amd64 7:5.1.9-0+deb12u1 [3713 kB]
-Get:43 http://deb.debian.org/debian bookworm/main amd64 libasound2 amd64 1.2.8-1+b1 [362 kB]
-Get:44 http://deb.debian.org/debian bookworm/main amd64 libgomp1 amd64 12.2.0-14+deb12u1 [116 kB]
-Get:45 http://security.debian.org/debian-security bookworm-security/main amd64 libavdevice59 amd64 7:5.1.9-0+deb12u1 [123 kB]
-Get:46 http://security.debian.org/debian-security bookworm-security/main amd64 ffmpeg amd64 7:5.1.9-0+deb12u1 [1822 kB]
-Get:47 http://deb.debian.org/debian bookworm/main amd64 libfftw3-single3 amd64 3.3.10-1 [806 kB]
-Get:48 http://deb.debian.org/debian bookworm/main amd64 libglib2.0-0 amd64 2.74.6-2+deb12u9 [1403 kB]
-Get:49 http://security.debian.org/debian-security bookworm-security/main amd64 linux-base all 4.12.1~deb12u1 [25.6 kB]
-Get:50 http://security.debian.org/debian-security bookworm-security/main amd64 linux-image-6.1.0-49-amd64 amd64 6.1.174-1 [70.3 MB]
-Get:51 http://deb.debian.org/debian bookworm/main amd64 libdw1 amd64 0.188-2.1 [235 kB]
-Get:52 http://deb.debian.org/debian bookworm/main amd64 libunwind8 amd64 1.6.2-3 [51.2 kB]
-Get:53 http://deb.debian.org/debian bookworm/main amd64 libgstreamer1.0-0 amd64 1.22.0-2+deb12u1 [1170 kB]
-Get:54 http://deb.debian.org/debian bookworm/main amd64 liborc-0.4-0 amd64 1:0.4.33-2 [164 kB]
-Get:55 http://deb.debian.org/debian bookworm/main amd64 iso-codes all 4.15.0-1 [2906 kB]
-Get:56 http://deb.debian.org/debian bookworm/main amd64 libgstreamer-plugins-base1.0-0 amd64 1.22.0-3+deb12u6 [934 kB]
-Get:57 http://deb.debian.org/debian bookworm/main amd64 x11-common all 1:7.7+23 [252 kB]
-Get:58 http://deb.debian.org/debian bookworm/main amd64 libice6 amd64 2:1.0.10-1 [58.5 kB]
-Get:59 http://deb.debian.org/debian bookworm/main amd64 libltdl7 amd64 2.4.7-7~deb12u1 [393 kB]
-Get:60 http://deb.debian.org/debian bookworm/main amd64 libasyncns0 amd64 0.8-6+b3 [12.9 kB]
-Get:61 http://deb.debian.org/debian bookworm/main amd64 libogg0 amd64 1.3.5-3 [23.4 kB]
-Get:62 http://deb.debian.org/debian bookworm/main amd64 libflac12 amd64 1.4.2+ds-2 [198 kB]
-Get:63 http://deb.debian.org/debian bookworm/main amd64 libmp3lame0 amd64 3.100-6 [365 kB]
-Get:64 http://deb.debian.org/debian bookworm/main amd64 libmpg123-0 amd64 1.31.2-1+deb12u1 [147 kB]
-Get:65 http://deb.debian.org/debian bookworm/main amd64 libopus0 amd64 1.3.1-3 [195 kB]
-Get:66 http://deb.debian.org/debian bookworm/main amd64 libvorbis0a amd64 1.3.7-1 [93.0 kB]
-Get:67 http://deb.debian.org/debian bookworm/main amd64 libvorbisenc2 amd64 1.3.7-1 [80.6 kB]
-Get:68 http://deb.debian.org/debian bookworm/main amd64 libsndfile1 amd64 1.2.0-1+deb12u1 [197 kB]
-Get:69 http://deb.debian.org/debian bookworm/main amd64 libxau6 amd64 1:1.0.9-1 [19.7 kB]
-Get:70 http://deb.debian.org/debian bookworm/main amd64 libxdmcp6 amd64 1:1.1.2-3 [26.3 kB]
-Get:71 http://deb.debian.org/debian bookworm/main amd64 libxcb1 amd64 1.15-1 [144 kB]
-Get:72 http://deb.debian.org/debian bookworm/main amd64 libx11-data all 2:1.8.4-2+deb12u2 [292 kB]
-Get:73 http://deb.debian.org/debian bookworm/main amd64 libx11-6 amd64 2:1.8.4-2+deb12u2 [760 kB]
-Get:74 http://deb.debian.org/debian bookworm/main amd64 libx11-xcb1 amd64 2:1.8.4-2+deb12u2 [192 kB]
-Get:75 http://deb.debian.org/debian bookworm/main amd64 libpulse0 amd64 16.1+dfsg1-2+b1 [274 kB]
-Get:76 http://deb.debian.org/debian bookworm/main amd64 libsm6 amd64 2:1.2.3-1 [35.1 kB]
-Get:77 http://deb.debian.org/debian bookworm/main amd64 libsoxr0 amd64 0.1.3-4 [77.8 kB]
-Get:78 http://deb.debian.org/debian bookworm/main amd64 libspeexdsp1 amd64 1.2.1-1 [40.9 kB]
-Get:79 http://deb.debian.org/debian bookworm/main amd64 libtdb1 amd64 1.4.8-2 [44.5 kB]
-Get:80 http://deb.debian.org/debian bookworm/main amd64 libwebrtc-audio-processing1 amd64 0.3-1+b1 [264 kB]
-Get:81 http://deb.debian.org/debian bookworm/main amd64 libnsl2 amd64 1.3.0-2 [39.5 kB]
-Get:82 http://deb.debian.org/debian bookworm/main amd64 libwrap0 amd64 7.6.q-32 [54.9 kB]
-Get:83 http://deb.debian.org/debian bookworm/main amd64 libxext6 amd64 2:1.3.4-1+b1 [52.9 kB]
-Get:84 http://deb.debian.org/debian bookworm/main amd64 libxtst6 amd64 2:1.2.3-1.1 [28.0 kB]
-Get:85 http://deb.debian.org/debian bookworm/main amd64 libaom3 amd64 3.6.0-1+deb12u2 [1850 kB]
-Get:86 http://deb.debian.org/debian bookworm/main amd64 libdrm-common all 2.4.114-1 [7112 B]
-Get:87 http://deb.debian.org/debian bookworm/main amd64 libdrm2 amd64 2.4.114-1+b1 [37.5 kB]
-Get:88 http://deb.debian.org/debian bookworm/main amd64 libva2 amd64 2.17.0-1 [69.2 kB]
-Get:89 http://deb.debian.org/debian bookworm/main amd64 libmfx1 amd64 22.5.4-1 [3219 kB]
-Get:90 http://deb.debian.org/debian bookworm/main amd64 libva-drm2 amd64 2.17.0-1 [16.4 kB]
-Get:91 http://deb.debian.org/debian bookworm/main amd64 libxcb-dri3-0 amd64 1.15-1 [107 kB]
-Get:92 http://deb.debian.org/debian bookworm/main amd64 libxfixes3 amd64 1:6.0.0-2 [22.7 kB]
-Get:93 http://deb.debian.org/debian bookworm/main amd64 libva-x11-2 amd64 2.17.0-1 [21.0 kB]
-Get:94 http://deb.debian.org/debian bookworm/main amd64 libvdpau1 amd64 1.5-2 [26.1 kB]
-Get:95 http://deb.debian.org/debian bookworm/main amd64 ocl-icd-libopencl1 amd64 2.3.1-1 [43.0 kB]
-Get:96 http://deb.debian.org/debian bookworm/main amd64 libbrotli1 amd64 1.0.9-2+b6 [275 kB]
-Get:97 http://deb.debian.org/debian bookworm/main amd64 libpng16-16 amd64 1.6.39-2+deb12u5 [277 kB]
-Get:98 http://deb.debian.org/debian bookworm/main amd64 libfreetype6 amd64 2.12.1+dfsg-5+deb12u4 [398 kB]
-Get:99 http://deb.debian.org/debian bookworm/main amd64 fonts-dejavu-core all 2.37-6 [1068 kB]
-Get:100 http://deb.debian.org/debian bookworm/main amd64 fontconfig-config amd64 2.14.1-4 [315 kB]
-Get:101 http://deb.debian.org/debian bookworm/main amd64 libfontconfig1 amd64 2.14.1-4 [386 kB]
-Get:102 http://deb.debian.org/debian bookworm/main amd64 libpixman-1-0 amd64 0.42.2-1 [546 kB]
-Get:103 http://deb.debian.org/debian bookworm/main amd64 libxcb-render0 amd64 1.15-1 [115 kB]
-Get:104 http://deb.debian.org/debian bookworm/main amd64 libxcb-shm0 amd64 1.15-1 [105 kB]
-Get:105 http://deb.debian.org/debian bookworm/main amd64 libxrender1 amd64 1:0.9.10-1.1 [33.2 kB]
-Get:106 http://deb.debian.org/debian bookworm/main amd64 libcairo2 amd64 1.16.0-7 [575 kB]
-Get:107 http://deb.debian.org/debian bookworm/main amd64 libcodec2-1.0 amd64 1.0.5-1 [8171 kB]
-Get:108 http://deb.debian.org/debian bookworm/main amd64 libdav1d6 amd64 1.0.0-2+deb12u1 [513 kB]
-Get:109 http://security.debian.org/debian-security bookworm-security/main amd64 linux-image-amd64 amd64 6.1.174-1 [1480 B]
-Get:110 http://deb.debian.org/debian bookworm/main amd64 libgsm1 amd64 1.0.22-1 [30.9 kB]
-Get:111 http://deb.debian.org/debian bookworm/main amd64 libhwy1 amd64 1.0.3-3+deb12u1 [348 kB]
-Get:112 http://deb.debian.org/debian bookworm/main amd64 liblcms2-2 amd64 2.14-2+deb12u1 [154 kB]
-Get:113 http://deb.debian.org/debian bookworm/main amd64 libjxl0.7 amd64 0.7.0-10+deb12u1 [1046 kB]
-Get:114 http://deb.debian.org/debian bookworm/main amd64 librav1e0 amd64 0.5.1-6 [763 kB]
-Get:115 http://deb.debian.org/debian bookworm/main amd64 libcairo-gobject2 amd64 1.16.0-7 [112 kB]
-Get:116 http://deb.debian.org/debian bookworm/main amd64 libgdk-pixbuf2.0-common all 2.42.10+dfsg-1+deb12u4 [307 kB]
-Get:117 http://deb.debian.org/debian bookworm/main amd64 libicu72 amd64 72.1-3+deb12u1 [9376 kB]
-Get:118 http://deb.debian.org/debian bookworm/main amd64 libxml2 amd64 2.9.14+dfsg-1.3~deb12u5 [688 kB]
-Get:119 http://deb.debian.org/debian bookworm/main amd64 shared-mime-info amd64 2.2-1 [729 kB]
-Get:120 http://deb.debian.org/debian bookworm/main amd64 libjpeg62-turbo amd64 1:2.1.5-2 [166 kB]
-Get:121 http://deb.debian.org/debian bookworm/main amd64 libdeflate0 amd64 1.14-1 [61.4 kB]
-Get:122 http://deb.debian.org/debian bookworm/main amd64 libjbig0 amd64 2.1-6.1 [31.7 kB]
-Get:123 http://deb.debian.org/debian bookworm/main amd64 liblerc4 amd64 4.0.0+ds-2 [170 kB]
-Get:124 http://deb.debian.org/debian bookworm/main amd64 libwebp7 amd64 1.2.4-0.2+deb12u1 [286 kB]
-Get:125 http://deb.debian.org/debian bookworm/main amd64 libtiff6 amd64 4.5.0-6+deb12u4 [316 kB]
-Get:126 http://deb.debian.org/debian bookworm/main amd64 libgdk-pixbuf-2.0-0 amd64 2.42.10+dfsg-1+deb12u4 [139 kB]
-Get:127 http://deb.debian.org/debian bookworm/main amd64 fontconfig amd64 2.14.1-4 [449 kB]
-Get:128 http://deb.debian.org/debian bookworm/main amd64 libfribidi0 amd64 1.0.8-2.1 [65.0 kB]
-Get:129 http://deb.debian.org/debian bookworm/main amd64 libgraphite2-3 amd64 1.3.14-1 [81.2 kB]
-Get:130 http://deb.debian.org/debian bookworm/main amd64 libharfbuzz0b amd64 6.0.0+dfsg-3 [1945 kB]
-Get:131 http://deb.debian.org/debian bookworm/main amd64 libthai-data all 0.1.29-1 [176 kB]
-Get:132 http://deb.debian.org/debian bookworm/main amd64 libdatrie1 amd64 0.2.13-2+b1 [43.3 kB]
-Get:133 http://deb.debian.org/debian bookworm/main amd64 libthai0 amd64 0.1.29-1 [57.5 kB]
-Get:134 http://deb.debian.org/debian bookworm/main amd64 libpango-1.0-0 amd64 1.50.12+ds-1 [212 kB]
-Get:135 http://deb.debian.org/debian bookworm/main amd64 libpangoft2-1.0-0 amd64 1.50.12+ds-1 [47.4 kB]
-Get:136 http://deb.debian.org/debian bookworm/main amd64 libpangocairo-1.0-0 amd64 1.50.12+ds-1 [34.2 kB]
-Get:137 http://deb.debian.org/debian bookworm/main amd64 librsvg2-2 amd64 2.54.7+dfsg-1~deb12u1 [2620 kB]
-Get:138 http://deb.debian.org/debian bookworm/main amd64 libshine3 amd64 3.1.1-2 [23.6 kB]
-Get:139 http://deb.debian.org/debian bookworm/main amd64 libsnappy1v5 amd64 1.1.9-3 [26.0 kB]
-Get:140 http://deb.debian.org/debian bookworm/main amd64 libspeex1 amd64 1.2.1-2 [54.6 kB]
-Get:141 http://deb.debian.org/debian bookworm/main amd64 libsvtav1enc1 amd64 1.4.1+dfsg-1 [2121 kB]
-Get:142 http://deb.debian.org/debian bookworm/main amd64 libtheora0 amd64 1.1.1+dfsg.1-16.1+deb12u1 [154 kB]
-Get:143 http://deb.debian.org/debian bookworm/main amd64 libtwolame0 amd64 0.4.0-2 [51.1 kB]
-Get:144 http://deb.debian.org/debian bookworm/main amd64 libvpx7 amd64 1.12.0-1+deb12u5 [1003 kB]
-Get:145 http://deb.debian.org/debian bookworm/main amd64 libwebpmux3 amd64 1.2.4-0.2+deb12u1 [109 kB]
-Get:146 http://deb.debian.org/debian bookworm/main amd64 libx264-164 amd64 2:0.164.3095+gitbaee400-3 [547 kB]
-Get:147 http://deb.debian.org/debian bookworm/main amd64 libnuma1 amd64 2.0.16-1 [21.0 kB]
-Get:148 http://deb.debian.org/debian bookworm/main amd64 libx265-199 amd64 3.5-2+b1 [1150 kB]
-Get:149 http://deb.debian.org/debian bookworm/main amd64 libxvidcore4 amd64 2:1.3.7-1 [242 kB]
-Get:150 http://deb.debian.org/debian bookworm/main amd64 libzvbi-common all 0.2.41-1+deb12u1 [69.9 kB]
-Get:151 http://deb.debian.org/debian bookworm/main amd64 libzvbi0 amd64 0.2.41-1+deb12u1 [275 kB]
-Get:152 http://deb.debian.org/debian bookworm/main amd64 libsamplerate0 amd64 0.2.2-3 [952 kB]
-Get:153 http://deb.debian.org/debian bookworm/main amd64 libjack-jackd2-0 amd64 1.9.21~dfsg-3 [281 kB]
-Get:154 http://deb.debian.org/debian bookworm/main amd64 libasound2-plugins amd64 1.2.7.1-1 [75.2 kB]
-Get:155 http://deb.debian.org/debian bookworm/main amd64 libpulsedsp amd64 16.1+dfsg1-2+b1 [36.8 kB]
-Get:156 http://deb.debian.org/debian bookworm/main amd64 pulseaudio-utils amd64 16.1+dfsg1-2+b1 [88.8 kB]
-Get:157 http://deb.debian.org/debian bookworm/main amd64 pulseaudio amd64 16.1+dfsg1-2+b1 [1174 kB]
-Get:158 http://deb.debian.org/debian bookworm/main amd64 libpython3.11-minimal amd64 3.11.2-6+deb12u7 [818 kB]
-Get:159 http://deb.debian.org/debian bookworm/main amd64 python3.11-minimal amd64 3.11.2-6+deb12u7 [2066 kB]
-Get:160 http://deb.debian.org/debian bookworm/main amd64 python3-minimal amd64 3.11.2-1+b1 [26.3 kB]
-Get:161 http://deb.debian.org/debian bookworm/main amd64 media-types all 10.0.0 [26.1 kB]
-Get:162 http://deb.debian.org/debian bookworm/main amd64 libsqlite3-0 amd64 3.40.1-2+deb12u2 [839 kB]
-Get:163 http://deb.debian.org/debian bookworm/main amd64 libpython3.11-stdlib amd64 3.11.2-6+deb12u7 [1797 kB]
-Get:164 http://deb.debian.org/debian bookworm/main amd64 python3.11 amd64 3.11.2-6+deb12u7 [574 kB]
-Get:165 http://deb.debian.org/debian bookworm/main amd64 libpython3-stdlib amd64 3.11.2-1+b1 [9312 B]
-Get:166 http://deb.debian.org/debian bookworm/main amd64 python3 amd64 3.11.2-1+b1 [26.3 kB]
-Get:167 http://deb.debian.org/debian bookworm/main amd64 dosfstools amd64 4.2-1 [142 kB]
-Get:168 http://deb.debian.org/debian bookworm/non-free-firmware amd64 raspi-firmware all 1.20220830+ds-1 [4816 kB]
-Get:169 http://deb.debian.org/debian bookworm/main amd64 sgml-base all 1.31 [15.4 kB]
-Get:170 http://deb.debian.org/debian bookworm/main amd64 sudo amd64 1.9.13p3-1+deb12u4 [1890 kB]
-Get:171 http://deb.debian.org/debian bookworm/main amd64 uuid-runtime amd64 2.38.1-5+deb12u3 [48.2 kB]
-Get:172 http://deb.debian.org/debian bookworm/non-free-firmware amd64 amd64-microcode amd64 3.20250311.1~deb12u1 [278 kB]
-Get:173 http://deb.debian.org/debian bookworm/main amd64 bash-completion all 1:2.11-6 [234 kB]
-Get:174 http://deb.debian.org/debian bookworm/main amd64 libuv1 amd64 1.44.2-1+deb12u1 [136 kB]
-Get:175 http://deb.debian.org/debian bookworm/main amd64 libfstrm0 amd64 0.6.1-1 [21.6 kB]
-Get:176 http://deb.debian.org/debian bookworm/main amd64 libjemalloc2 amd64 5.3.0-1 [275 kB]
-Get:177 http://deb.debian.org/debian bookworm/main amd64 liblmdb0 amd64 0.9.24-1 [45.0 kB]
-Get:178 http://deb.debian.org/debian bookworm/main amd64 libmaxminddb0 amd64 1.7.1-1 [29.8 kB]
-Get:179 http://deb.debian.org/debian bookworm/main amd64 libprotobuf-c1 amd64 1.4.1-1+b1 [27.5 kB]
-Get:180 http://deb.debian.org/debian bookworm/main amd64 bzip2 amd64 1.0.8-5+b1 [49.8 kB]
-Get:181 http://deb.debian.org/debian bookworm/main amd64 ca-certificates all 20230311+deb12u1 [155 kB]
-Get:182 http://deb.debian.org/debian bookworm/main amd64 libmagic-mgc amd64 1:5.44-3 [305 kB]
-Get:183 http://deb.debian.org/debian bookworm/main amd64 libmagic1 amd64 1:5.44-3 [104 kB]
-Get:184 http://deb.debian.org/debian bookworm/main amd64 file amd64 1:5.44-3 [42.5 kB]
-Get:185 http://deb.debian.org/debian bookworm/main amd64 gettext-base amd64 0.21-12 [160 kB]
-Get:186 http://deb.debian.org/debian bookworm/main amd64 iucode-tool amd64 2.3.1-3 [56.1 kB]
-Get:187 http://deb.debian.org/debian bookworm/non-free-firmware amd64 intel-microcode amd64 3.20251111.1~deb12u1 [12.8 MB]
-Get:188 http://deb.debian.org/debian bookworm/main amd64 libc-l10n all 2.36-9+deb12u14 [676 kB]
-Get:189 http://deb.debian.org/debian bookworm/main amd64 libpam-systemd amd64 252.39-1~deb12u2 [226 kB]
-Get:190 http://deb.debian.org/debian bookworm/main amd64 locales all 2.36-9+deb12u14 [3906 kB]
-Get:191 http://deb.debian.org/debian bookworm/main amd64 lsof amd64 4.95.0-1 [318 kB]
-Get:192 http://deb.debian.org/debian bookworm/main amd64 manpages all 6.03-2 [1332 kB]
-Get:193 http://deb.debian.org/debian bookworm/main amd64 libcbor0.8 amd64 0.8.0-2+b1 [27.4 kB]
-Get:194 http://deb.debian.org/debian bookworm/main amd64 libfido2-1 amd64 1.12.0-2+b1 [77.2 kB]
-Get:195 http://deb.debian.org/debian bookworm/main amd64 openssh-client amd64 1:9.2p1-2+deb12u10 [994 kB]
-Get:196 http://deb.debian.org/debian bookworm/main amd64 pci.ids all 0.0~2023.04.11-1 [243 kB]
-Get:197 http://deb.debian.org/debian bookworm/main amd64 libpci3 amd64 1:3.9.0-4 [67.4 kB]
-Get:198 http://deb.debian.org/debian bookworm/main amd64 pciutils amd64 1:3.9.0-4 [104 kB]
-Get:199 http://deb.debian.org/debian bookworm/main amd64 ucf all 3.0043+nmu1+deb12u1 [55.3 kB]
-Get:200 http://deb.debian.org/debian bookworm/main amd64 libpsl5 amd64 0.21.2-1 [58.7 kB]
-Get:201 http://deb.debian.org/debian bookworm/main amd64 wget amd64 1.21.3-1+deb12u1 [937 kB]
-Get:202 http://deb.debian.org/debian bookworm/main amd64 xz-utils amd64 5.4.1-1 [471 kB]
-Get:203 http://deb.debian.org/debian bookworm/main amd64 alsa-topology-conf all 1.2.5.1-2 [15.2 kB]
-Get:204 http://deb.debian.org/debian bookworm/main amd64 alsa-ucm-conf all 1.2.8-1 [51.7 kB]
-Get:205 http://deb.debian.org/debian bookworm/main amd64 libatopology2 amd64 1.2.8-1+b1 [50.4 kB]
-Get:206 http://deb.debian.org/debian bookworm/main amd64 alsa-utils amd64 1.2.8-1 [1098 kB]
-Get:207 http://deb.debian.org/debian bookworm/main amd64 apparmor amd64 3.0.8-3 [616 kB]
-Get:208 http://deb.debian.org/debian bookworm/non-free-firmware amd64 atmel-firmware all 1.3-7 [147 kB]
-Get:209 http://deb.debian.org/debian bookworm/main amd64 binutils-common amd64 2.40-2 [2487 kB]
-Get:210 http://deb.debian.org/debian bookworm/main amd64 libbinutils amd64 2.40-2 [572 kB]
-Get:211 http://deb.debian.org/debian bookworm/main amd64 libctf-nobfd0 amd64 2.40-2 [153 kB]
-Get:212 http://deb.debian.org/debian bookworm/main amd64 libctf0 amd64 2.40-2 [89.8 kB]
-Get:213 http://deb.debian.org/debian bookworm/main amd64 libgprofng0 amd64 2.40-2 [812 kB]
-Get:214 http://deb.debian.org/debian bookworm/main amd64 binutils-x86-64-linux-gnu amd64 2.40-2 [2246 kB]
-Get:215 http://deb.debian.org/debian bookworm/main amd64 binutils amd64 2.40-2 [65.0 kB]
-Get:216 http://deb.debian.org/debian bookworm/non-free-firmware amd64 bluez-firmware all 1.2-9 [185 kB]
-Get:217 http://deb.debian.org/debian bookworm/main amd64 libc-dev-bin amd64 2.36-9+deb12u14 [48.1 kB]
-Get:218 http://deb.debian.org/debian bookworm/main amd64 libcrypt-dev amd64 1:4.4.33-2 [118 kB]
-Get:219 http://deb.debian.org/debian bookworm/main amd64 libtirpc-dev amd64 1.3.3+ds-1 [191 kB]
-Get:220 http://deb.debian.org/debian bookworm/main amd64 libnsl-dev amd64 1.3.0-2 [66.4 kB]
-Get:221 http://deb.debian.org/debian bookworm/main amd64 rpcsvc-proto amd64 1.4.3-1 [63.3 kB]
-Get:222 http://deb.debian.org/debian bookworm/main amd64 libc6-dev amd64 2.36-9+deb12u14 [1904 kB]
-Get:223 http://deb.debian.org/debian bookworm/main amd64 libisl23 amd64 0.25-1.1 [683 kB]
-Get:224 http://deb.debian.org/debian bookworm/main amd64 libmpfr6 amd64 4.2.0-1 [701 kB]
-Get:225 http://deb.debian.org/debian bookworm/main amd64 libmpc3 amd64 1.3.1-1 [51.5 kB]
-Get:226 http://deb.debian.org/debian bookworm/main amd64 cpp-12 amd64 12.2.0-14+deb12u1 [9768 kB]
-Get:227 http://deb.debian.org/debian bookworm/main amd64 cpp amd64 4:12.2.0-3 [6836 B]
-Get:228 http://deb.debian.org/debian bookworm/main amd64 libcc1-0 amd64 12.2.0-14+deb12u1 [41.7 kB]
-Get:229 http://deb.debian.org/debian bookworm/main amd64 libitm1 amd64 12.2.0-14+deb12u1 [26.1 kB]
-Get:230 http://deb.debian.org/debian bookworm/main amd64 libatomic1 amd64 12.2.0-14+deb12u1 [9376 B]
-Get:231 http://deb.debian.org/debian bookworm/main amd64 libasan8 amd64 12.2.0-14+deb12u1 [2193 kB]
-Get:232 http://deb.debian.org/debian bookworm/main amd64 liblsan0 amd64 12.2.0-14+deb12u1 [969 kB]
-Get:233 http://deb.debian.org/debian bookworm/main amd64 libtsan2 amd64 12.2.0-14+deb12u1 [2197 kB]
-Get:234 http://deb.debian.org/debian bookworm/main amd64 libubsan1 amd64 12.2.0-14+deb12u1 [883 kB]
-Get:235 http://deb.debian.org/debian bookworm/main amd64 libquadmath0 amd64 12.2.0-14+deb12u1 [145 kB]
-Get:236 http://deb.debian.org/debian bookworm/main amd64 libgcc-12-dev amd64 12.2.0-14+deb12u1 [2437 kB]
-Get:237 http://deb.debian.org/debian bookworm/main amd64 gcc-12 amd64 12.2.0-14+deb12u1 [19.3 MB]
-Get:238 http://deb.debian.org/debian bookworm/main amd64 gcc amd64 4:12.2.0-3 [5216 B]
-Get:239 http://deb.debian.org/debian bookworm/main amd64 libstdc++-12-dev amd64 12.2.0-14+deb12u1 [2047 kB]
-Get:240 http://deb.debian.org/debian bookworm/main amd64 g++-12 amd64 12.2.0-14+deb12u1 [10.7 MB]
-Get:241 http://deb.debian.org/debian bookworm/main amd64 g++ amd64 4:12.2.0-3 [1356 B]
-Get:242 http://deb.debian.org/debian bookworm/main amd64 make amd64 4.3-4.1 [396 kB]
-Get:243 http://deb.debian.org/debian bookworm/main amd64 libdpkg-perl all 1.21.23 [604 kB]
-Get:244 http://deb.debian.org/debian bookworm/main amd64 patch amd64 2.7.6-7 [128 kB]
-Get:245 http://deb.debian.org/debian bookworm/main amd64 dpkg-dev all 1.21.23 [1354 kB]
-Get:246 http://deb.debian.org/debian bookworm/main amd64 build-essential amd64 12.9 [7704 B]
-Get:247 http://deb.debian.org/debian bookworm/main amd64 busybox amd64 1:1.35.0-4+deb12u1+b1 [452 kB]
-Get:248 http://deb.debian.org/debian bookworm/main amd64 libarchive13 amd64 3.6.2-1+deb12u4 [345 kB]
-Get:249 http://deb.debian.org/debian bookworm/main amd64 libsasl2-modules-db amd64 2.1.28+dfsg-10 [20.3 kB]
-Get:250 http://deb.debian.org/debian bookworm/main amd64 libsasl2-2 amd64 2.1.28+dfsg-10 [59.7 kB]
-Get:251 http://deb.debian.org/debian bookworm/main amd64 libldap-2.5-0 amd64 2.5.13+dfsg-5 [183 kB]
-Get:252 http://deb.debian.org/debian bookworm/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2+b2 [60.8 kB]
-Get:253 http://deb.debian.org/debian bookworm/main amd64 libssh2-1 amd64 1.10.0-3+b1 [179 kB]
-Get:254 http://deb.debian.org/debian bookworm/main amd64 libcurl4 amd64 7.88.1-10+deb12u14 [392 kB]
-Get:255 http://deb.debian.org/debian bookworm/main amd64 libjsoncpp25 amd64 1.9.5-4 [78.6 kB]
-Get:256 http://deb.debian.org/debian bookworm/main amd64 librhash0 amd64 1.4.3-3 [134 kB]
-Get:257 http://deb.debian.org/debian bookworm/main amd64 cmake-data all 3.25.1-1 [2026 kB]
-Get:258 http://deb.debian.org/debian bookworm/main amd64 cmake amd64 3.25.1-1 [8692 kB]
-Get:259 http://deb.debian.org/debian bookworm/main amd64 cryptsetup-bin amd64 2:2.6.1-4~deb12u2 [474 kB]
-Get:260 http://deb.debian.org/debian bookworm/main amd64 cryptsetup amd64 2:2.6.1-4~deb12u2 [213 kB]
-Get:261 http://deb.debian.org/debian bookworm/main amd64 curl amd64 7.88.1-10+deb12u14 [316 kB]
-Get:262 http://deb.debian.org/debian bookworm/non-free-firmware amd64 dahdi-firmware-nonfree all 2.11.1.0.20170917-2 [732 kB]
-Get:263 http://deb.debian.org/debian bookworm/main amd64 dbus-user-session amd64 1.14.10-1~deb12u1 [78.1 kB]
-Get:264 http://deb.debian.org/debian bookworm/main amd64 libassuan0 amd64 2.5.5-5 [48.5 kB]
-Get:265 http://deb.debian.org/debian bookworm/main amd64 gpgconf amd64 2.2.40-1.1+deb12u2 [565 kB]
-Get:266 http://deb.debian.org/debian bookworm/main amd64 libksba8 amd64 1.6.3-2 [128 kB]
-Get:267 http://deb.debian.org/debian bookworm/main amd64 libnpth0 amd64 1.6-3 [19.0 kB]
-Get:268 http://deb.debian.org/debian bookworm/main amd64 dirmngr amd64 2.2.40-1.1+deb12u2 [793 kB]
-Get:269 http://deb.debian.org/debian bookworm/main amd64 dns-root-data all 2024071801~deb12u1 [5752 B]
-Get:270 http://deb.debian.org/debian bookworm/main amd64 libnfnetlink0 amd64 1.0.2-2 [15.1 kB]
-Get:271 http://deb.debian.org/debian bookworm/main amd64 libnetfilter-conntrack3 amd64 1.0.9-3 [40.7 kB]
-Get:272 http://deb.debian.org/debian bookworm/main amd64 dnsmasq-base amd64 2.90-4~deb12u2 [498 kB]
-Get:273 http://deb.debian.org/debian bookworm/main amd64 libefivar1 amd64 37-6 [50.0 kB]
-Get:274 http://deb.debian.org/debian bookworm/main amd64 libefiboot1 amd64 37-6 [44.1 kB]
-Get:275 http://deb.debian.org/debian bookworm/main amd64 efibootmgr amd64 17-2 [27.6 kB]
-Get:276 http://deb.debian.org/debian bookworm/main amd64 libfakeroot amd64 1.31-1.2 [28.3 kB]
-Get:277 http://deb.debian.org/debian bookworm/main amd64 fakeroot amd64 1.31-1.2 [66.9 kB]
-Get:278 http://deb.debian.org/debian bookworm/main amd64 libraw1394-11 amd64 2.1.2-2 [41.1 kB]
-Get:279 http://deb.debian.org/debian bookworm/main amd64 libavc1394-0 amd64 0.5.4-5 [19.9 kB]
-Get:280 http://deb.debian.org/debian bookworm/main amd64 libass9 amd64 1:0.17.1-1 [107 kB]
-Get:281 http://deb.debian.org/debian bookworm/main amd64 libudfread0 amd64 1.1.2-1 [16.5 kB]
-Get:282 http://deb.debian.org/debian bookworm/main amd64 libbluray2 amd64 1:1.3.4-1 [138 kB]
-Get:283 http://deb.debian.org/debian bookworm/main amd64 libchromaprint1 amd64 1.5.1-2+b1 [41.0 kB]
-Get:284 http://deb.debian.org/debian bookworm/main amd64 libgme0 amd64 0.6.3-6 [130 kB]
-Get:285 http://deb.debian.org/debian bookworm/main amd64 libvorbisfile3 amd64 1.3.7-1 [26.1 kB]
-Get:286 http://deb.debian.org/debian bookworm/main amd64 libopenmpt0 amd64 0.6.9-1 [693 kB]
-Get:287 http://deb.debian.org/debian bookworm/main amd64 librabbitmq4 amd64 0.11.0-1+deb12u1 [41.4 kB]
-Get:288 http://deb.debian.org/debian bookworm/main amd64 libcjson1 amd64 1.7.15-1+deb12u4 [23.2 kB]
-Get:289 http://deb.debian.org/debian bookworm/main amd64 libmbedcrypto7 amd64 2.28.3-1 [277 kB]
-Get:290 http://deb.debian.org/debian bookworm/main amd64 librist4 amd64 0.2.7+dfsg-1 [73.9 kB]
-Get:291 http://deb.debian.org/debian bookworm/main amd64 libsrt1.5-gnutls amd64 1.5.1-1+deb12u1 [313 kB]
-Get:292 http://deb.debian.org/debian bookworm/main amd64 libssh-gcrypt-4 amd64 0.10.6-0+deb12u2 [220 kB]
-Get:293 http://deb.debian.org/debian bookworm/main amd64 libnorm1 amd64 1.5.9+dfsg-2 [221 kB]
-Get:294 http://deb.debian.org/debian bookworm/main amd64 libpgm-5.3-0 amd64 5.3.128~dfsg-2 [161 kB]
-Get:295 http://deb.debian.org/debian bookworm/main amd64 libsodium23 amd64 1.0.18-1+deb12u1 [162 kB]
-Get:296 http://deb.debian.org/debian bookworm/main amd64 libzmq5 amd64 4.3.4-6 [273 kB]
-Get:297 http://deb.debian.org/debian bookworm/main amd64 libbs2b0 amd64 3.1.0+dfsg-7 [11.5 kB]
-Get:298 http://deb.debian.org/debian bookworm/main amd64 libflite1 amd64 2.2-5 [12.8 MB]
-Get:299 http://deb.debian.org/debian bookworm/main amd64 libserd-0-0 amd64 0.30.16-1 [47.5 kB]
-Get:300 http://deb.debian.org/debian bookworm/main amd64 libsord-0-0 amd64 0.16.14+git221008-1 [20.8 kB]
-Get:301 http://deb.debian.org/debian bookworm/main amd64 libsratom-0-0 amd64 0.6.14-1 [17.7 kB]
-Get:302 http://deb.debian.org/debian bookworm/main amd64 liblilv-0-0 amd64 0.24.14-1 [49.4 kB]
-Get:303 http://deb.debian.org/debian bookworm/main amd64 libmysofa1 amd64 1.3.1~dfsg0-1 [1158 kB]
-Get:304 http://deb.debian.org/debian bookworm/main amd64 libepoxy0 amd64 1.5.10-1 [189 kB]
-Get:305 http://deb.debian.org/debian bookworm/main amd64 libvulkan1 amd64 1.3.239.0-1 [116 kB]
-Get:306 http://deb.debian.org/debian bookworm/main amd64 libplacebo208 amd64 4.208.0-3 [2239 kB]
-Get:307 http://deb.debian.org/debian bookworm/main amd64 libblas3 amd64 3.11.0-2 [149 kB]
-Get:308 http://deb.debian.org/debian bookworm/main amd64 libgfortran5 amd64 12.2.0-14+deb12u1 [793 kB]
-Get:309 http://deb.debian.org/debian bookworm/main amd64 liblapack3 amd64 3.11.0-2 [2323 kB]
-Get:310 http://deb.debian.org/debian bookworm/main amd64 libsphinxbase3 amd64 0.8+5prealpha+1-16 [118 kB]
-Get:311 http://deb.debian.org/debian bookworm/main amd64 libpocketsphinx3 amd64 0.8+5prealpha+1-15 [125 kB]
-Get:312 http://deb.debian.org/debian bookworm/main amd64 librubberband2 amd64 3.1.2+dfsg0-1 [137 kB]
-Get:313 http://deb.debian.org/debian bookworm/main amd64 libvidstab1.1 amd64 1.1.0-2+b1 [37.8 kB]
-Get:314 http://deb.debian.org/debian bookworm/main amd64 libzimg2 amd64 3.0.4+ds1-1 [227 kB]
-Get:315 http://deb.debian.org/debian bookworm/main amd64 libcaca0 amd64 0.99.beta20-3 [205 kB]
-Get:316 http://deb.debian.org/debian bookworm/main amd64 libcdio19 amd64 2.1.0-4 [203 kB]
-Get:317 http://deb.debian.org/debian bookworm/main amd64 libcdio-cdda2 amd64 10.2+2.0.1-1 [20.9 kB]
-Get:318 http://deb.debian.org/debian bookworm/main amd64 libcdio-paranoia2 amd64 10.2+2.0.1-1 [20.4 kB]
-Get:319 http://deb.debian.org/debian bookworm/main amd64 libusb-1.0-0 amd64 2:1.0.26-1 [62.6 kB]
-Get:320 http://deb.debian.org/debian bookworm/main amd64 libdc1394-25 amd64 2.2.6-4 [109 kB]
-Get:321 http://deb.debian.org/debian bookworm/main amd64 libglvnd0 amd64 1.6.0-1 [51.8 kB]
-Get:322 http://deb.debian.org/debian bookworm/main amd64 libglapi-mesa amd64 22.3.6-1+deb12u1 [35.7 kB]
-Get:323 http://deb.debian.org/debian bookworm/main amd64 libxcb-dri2-0 amd64 1.15-1 [107 kB]
-Get:324 http://deb.debian.org/debian bookworm/main amd64 libxcb-glx0 amd64 1.15-1 [122 kB]
-Get:325 http://deb.debian.org/debian bookworm/main amd64 libxcb-present0 amd64 1.15-1 [105 kB]
-Get:326 http://deb.debian.org/debian bookworm/main amd64 libxcb-randr0 amd64 1.15-1 [117 kB]
-Get:327 http://deb.debian.org/debian bookworm/main amd64 libxcb-sync1 amd64 1.15-1 [109 kB]
-Get:328 http://deb.debian.org/debian bookworm/main amd64 libxcb-xfixes0 amd64 1.15-1 [109 kB]
-Get:329 http://deb.debian.org/debian bookworm/main amd64 libxshmfence1 amd64 1.3-1 [8820 B]
-Get:330 http://deb.debian.org/debian bookworm/main amd64 libxxf86vm1 amd64 1:1.1.4-1+b2 [20.8 kB]
-Get:331 http://deb.debian.org/debian bookworm/main amd64 libdrm-amdgpu1 amd64 2.4.114-1+b1 [20.9 kB]
-Get:332 http://deb.debian.org/debian bookworm/main amd64 libpciaccess0 amd64 0.17-2 [51.4 kB]
-Get:333 http://deb.debian.org/debian bookworm/main amd64 libdrm-intel1 amd64 2.4.114-1+b1 [64.0 kB]
-Get:334 http://deb.debian.org/debian bookworm/main amd64 libdrm-nouveau2 amd64 2.4.114-1+b1 [19.1 kB]
-Get:335 http://deb.debian.org/debian bookworm/main amd64 libdrm-radeon1 amd64 2.4.114-1+b1 [21.8 kB]
-Get:336 http://deb.debian.org/debian bookworm/main amd64 libz3-4 amd64 4.8.12-3.1 [7216 kB]
-Get:337 http://deb.debian.org/debian bookworm/main amd64 libllvm15 amd64 1:15.0.6-4+b1 [23.1 MB]
-Get:338 http://deb.debian.org/debian bookworm/main amd64 libsensors-config all 1:3.6.0-7.1 [14.3 kB]
-Get:339 http://deb.debian.org/debian bookworm/main amd64 libsensors5 amd64 1:3.6.0-7.1 [34.2 kB]
-Get:340 http://deb.debian.org/debian bookworm/main amd64 libgl1-mesa-dri amd64 22.3.6-1+deb12u1 [7239 kB]
-Get:341 http://deb.debian.org/debian bookworm/main amd64 libglx-mesa0 amd64 22.3.6-1+deb12u1 [147 kB]
-Get:342 http://deb.debian.org/debian bookworm/main amd64 libglx0 amd64 1.6.0-1 [34.4 kB]
-Get:343 http://deb.debian.org/debian bookworm/main amd64 libgl1 amd64 1.6.0-1 [88.4 kB]
-Get:344 http://deb.debian.org/debian bookworm/main amd64 libiec61883-0 amd64 1.2.0-6+b1 [30.5 kB]
-Get:345 http://deb.debian.org/debian bookworm/main amd64 libopenal-data all 1:1.19.1-2 [170 kB]
-Get:346 http://deb.debian.org/debian bookworm/main amd64 libsndio7.0 amd64 1.9.0-0.3+b2 [27.3 kB]
-Get:347 http://deb.debian.org/debian bookworm/main amd64 libopenal1 amd64 1:1.19.1-2 [501 kB]
-Get:348 http://deb.debian.org/debian bookworm/main amd64 libwayland-client0 amd64 1.21.0-1 [28.3 kB]
-Get:349 http://deb.debian.org/debian bookworm/main amd64 libdecor-0-0 amd64 0.1.1-2 [14.6 kB]
-Get:350 http://deb.debian.org/debian bookworm/main amd64 libwayland-server0 amd64 1.21.0-1 [35.9 kB]
-Get:351 http://deb.debian.org/debian bookworm/main amd64 libgbm1 amd64 22.3.6-1+deb12u1 [38.0 kB]
-Get:352 http://deb.debian.org/debian bookworm/main amd64 libwayland-cursor0 amd64 1.21.0-1 [14.4 kB]
-Get:353 http://deb.debian.org/debian bookworm/main amd64 libwayland-egl1 amd64 1.21.0-1 [8640 B]
-Get:354 http://deb.debian.org/debian bookworm/main amd64 libxcursor1 amd64 1:1.2.1-1 [40.9 kB]
-Get:355 http://deb.debian.org/debian bookworm/main amd64 libxi6 amd64 2:1.8-1+b1 [84.2 kB]
-Get:356 http://deb.debian.org/debian bookworm/main amd64 libxkbcommon0 amd64 1.5.0-1 [106 kB]
-Get:357 http://deb.debian.org/debian bookworm/main amd64 libxrandr2 amd64 2:1.5.2-2+b1 [39.2 kB]
-Get:358 http://deb.debian.org/debian bookworm/main amd64 libxss1 amd64 1:1.2.3-1 [17.8 kB]
-Get:359 http://deb.debian.org/debian bookworm/main amd64 libsdl2-2.0-0 amd64 2.26.5+dfsg-1 [629 kB]
-Get:360 http://deb.debian.org/debian bookworm/main amd64 libxcb-shape0 amd64 1.15-1 [106 kB]
-Get:361 http://deb.debian.org/debian bookworm/main amd64 libxv1 amd64 2:1.0.11-1.1 [24.8 kB]
-Get:362 http://deb.debian.org/debian bookworm/non-free-firmware amd64 firmware-amd-graphics all 20230210-5 [11.9 MB]
-Get:363 http://deb.debian.org/debian bookworm/non-free-firmware amd64 firmware-ast all 20140808-7 [8932 B]
-Get:364 http://deb.debian.org/debian bookworm/main amd64 firmware-ath9k-htc all 1.4.0-108-gd856466+dfsg1-1.3+deb12u1 [47.0 kB]
-Get:365 http://deb.debian.org/debian bookworm/non-free-firmware amd64 firmware-atheros all 20230210-5 [16.8 MB]
-Get:366 http://deb.debian.org/debian bookworm/non-free-firmware amd64 firmware-bnx2 all 20230210-5 [133 kB]
-Get:367 http://deb.debian.org/debian bookworm/non-free-firmware amd64 firmware-bnx2x all 20230210-5 [1738 kB]
-Get:368 http://deb.debian.org/debian bookworm/non-free-firmware amd64 firmware-brcm80211 all 20230210-5 [5356 kB]
-Get:369 http://deb.debian.org/debian bookworm/non-free-firmware amd64 firmware-cavium all 20230210-5 [681 kB]
-Get:370 http://deb.debian.org/debian bookworm/non-free-firmware amd64 firmware-intel-sound all 20230210-5 [821 kB]
-Get:371 http://deb.debian.org/debian bookworm/non-free-firmware amd64 firmware-iwlwifi all 20230210-5 [9336 kB]
-Get:372 http://deb.debian.org/debian bookworm/non-free-firmware amd64 firmware-libertas all 20230210-5 [31.2 MB]
-Get:373 http://deb.debian.org/debian bookworm/main amd64 firmware-linux-free all 20200122-1 [24.2 kB]
-Get:374 http://deb.debian.org/debian bookworm/non-free-firmware amd64 firmware-misc-nonfree all 20230210-5 [13.0 MB]
-Get:375 http://deb.debian.org/debian bookworm/non-free-firmware amd64 firmware-linux-nonfree all 20230210-5 [49.5 kB]
-Get:376 http://deb.debian.org/debian bookworm/non-free-firmware amd64 firmware-myricom all 20230210-5 [302 kB]
-Get:377 http://deb.debian.org/debian bookworm/non-free-firmware amd64 firmware-netronome all 20230210-5 [1743 kB]
-Get:378 http://deb.debian.org/debian bookworm/non-free-firmware amd64 firmware-netxen all 20230210-5 [1273 kB]
-Get:379 http://deb.debian.org/debian bookworm/non-free-firmware amd64 firmware-nvidia-gsp amd64 535.261.03-1 [38.6 MB]
-Get:380 http://deb.debian.org/debian bookworm/non-free-firmware amd64 firmware-nvidia-tesla-535-gsp amd64 535.216.03-3~deb12u1 [38.5 MB]
-Get:381 http://deb.debian.org/debian bookworm/non-free-firmware amd64 firmware-nvidia-tesla-gsp amd64 525.147.05-15~deb12u1 [41.3 MB]
-Get:382 http://deb.debian.org/debian bookworm/non-free-firmware amd64 firmware-qcom-soc all 20230210-5 [28.3 MB]
-Get:383 http://deb.debian.org/debian bookworm/non-free-firmware amd64 firmware-qlogic all 20230210-5 [4240 kB]
-Get:384 http://deb.debian.org/debian bookworm/non-free-firmware amd64 firmware-realtek all 20230210-5 [1491 kB]
-Get:385 http://deb.debian.org/debian bookworm/non-free-firmware amd64 firmware-realtek-rtl8723cs-bt all 20181104-2 [17.8 kB]
-Get:386 http://deb.debian.org/debian bookworm/non-free-firmware amd64 firmware-samsung all 20230210-5 [551 kB]
-Get:387 http://deb.debian.org/debian bookworm/non-free-firmware amd64 firmware-siano all 20230210-5 [354 kB]
-Get:388 http://deb.debian.org/debian bookworm/non-free-firmware amd64 firmware-sof-signed all 2.2.4-1 [613 kB]
-Get:389 http://deb.debian.org/debian bookworm/non-free-firmware amd64 firmware-ti-connectivity all 20230210-5 [1068 kB]
-Get:390 http://deb.debian.org/debian bookworm/non-free-firmware amd64 firmware-zd1211 all 1:1.5-10 [12.6 kB]
-Get:391 http://deb.debian.org/debian bookworm/main amd64 fonts-cantarell all 0.303.1-1 [265 kB]
-Get:392 http://deb.debian.org/debian bookworm/main amd64 fonts-terminus amd64 1.2.0+ds2-1+b1 [80.9 kB]
-Get:393 http://deb.debian.org/debian bookworm/main amd64 fxload amd64 0.0.20081013-2 [15.1 kB]
-Get:394 http://deb.debian.org/debian bookworm/main amd64 libcurl3-gnutls amd64 7.88.1-10+deb12u14 [386 kB]
-Get:395 http://deb.debian.org/debian bookworm/main amd64 liberror-perl all 0.17029-2 [29.0 kB]
-Get:396 http://deb.debian.org/debian bookworm/main amd64 git-man all 1:2.39.5-0+deb12u3 [2053 kB]
-Get:397 http://deb.debian.org/debian bookworm/main amd64 git amd64 1:2.39.5-0+deb12u3 [7264 kB]
-Get:398 http://deb.debian.org/debian bookworm/main amd64 gnupg-l10n all 2.2.40-1.1+deb12u2 [1093 kB]
-Get:399 http://deb.debian.org/debian bookworm/main amd64 gnupg-utils amd64 2.2.40-1.1+deb12u2 [927 kB]
-Get:400 http://deb.debian.org/debian bookworm/main amd64 gpg amd64 2.2.40-1.1+deb12u2 [950 kB]
-Get:401 http://deb.debian.org/debian bookworm/main amd64 pinentry-curses amd64 1.2.1-1 [77.4 kB]
-Get:402 http://deb.debian.org/debian bookworm/main amd64 gpg-agent amd64 2.2.40-1.1+deb12u2 [695 kB]
-Get:403 http://deb.debian.org/debian bookworm/main amd64 gpg-wks-client amd64 2.2.40-1.1+deb12u2 [541 kB]
-Get:404 http://deb.debian.org/debian bookworm/main amd64 gpg-wks-server amd64 2.2.40-1.1+deb12u2 [531 kB]
-Get:405 http://deb.debian.org/debian bookworm/main amd64 gpgsm amd64 2.2.40-1.1+deb12u2 [671 kB]
-Get:406 http://deb.debian.org/debian bookworm/main amd64 gnupg all 2.2.40-1.1+deb12u2 [846 kB]
-Get:407 http://deb.debian.org/debian bookworm/main amd64 libfuse2 amd64 2.9.9-6+b1 [119 kB]
-Get:408 http://deb.debian.org/debian bookworm/main amd64 grub-common amd64 2.06-13+deb12u2 [2719 kB]
-Get:409 http://deb.debian.org/debian bookworm/main amd64 grub2-common amd64 2.06-13+deb12u2 [615 kB]
-Get:410 http://deb.debian.org/debian bookworm/main amd64 grub-efi-amd64-bin amd64 2.06-13+deb12u2 [1577 kB]
-Get:411 http://deb.debian.org/debian bookworm/main amd64 grub-efi-amd64 amd64 2.06-13+deb12u2 [45.7 kB]
-Get:412 http://deb.debian.org/debian bookworm/main amd64 grub-efi-amd64-signed amd64 1+2.06+13+deb12u2 [1253 kB]
-Get:413 http://deb.debian.org/debian bookworm/main amd64 grub-pc-bin amd64 2.06-13+deb12u2 [1002 kB]
-Get:414 http://deb.debian.org/debian bookworm/main amd64 libcdparanoia0 amd64 3.10.2+debian-14 [48.8 kB]
-Get:415 http://deb.debian.org/debian bookworm/main amd64 libvisual-0.4-0 amd64 0.4.0-19 [132 kB]
-Get:416 http://deb.debian.org/debian bookworm/main amd64 gstreamer1.0-plugins-base amd64 1.22.0-3+deb12u6 [740 kB]
-Get:417 http://deb.debian.org/debian bookworm/main amd64 hdmi2usb-fx2-firmware all 0.0.0~git20151225-3 [11.3 kB]
-Get:418 http://deb.debian.org/debian bookworm/main amd64 libnl-3-200 amd64 3.7.0-0.2+b1 [63.1 kB]
-Get:419 http://deb.debian.org/debian bookworm/main amd64 libnl-genl-3-200 amd64 3.7.0-0.2+b1 [21.6 kB]
-Get:420 http://deb.debian.org/debian bookworm/main amd64 htop amd64 3.2.2-2 [152 kB]
-Get:421 http://deb.debian.org/debian bookworm/main amd64 i965-va-driver amd64 2.4.1+dfsg1-1 [309 kB]
-Get:422 http://deb.debian.org/debian bookworm/main amd64 libindi-data all 1.9.9+dfsg-2 [46.2 kB]
-Get:423 http://deb.debian.org/debian bookworm/main amd64 libcfitsio10 amd64 4.2.0-3 [563 kB]
-Get:424 http://deb.debian.org/debian bookworm/main amd64 libfftw3-double3 amd64 3.3.10-1 [776 kB]
-Get:425 http://deb.debian.org/debian bookworm/main amd64 libnova-0.16-0 amd64 0.16-5 [841 kB]
-Get:426 http://deb.debian.org/debian bookworm/main amd64 libindidriver1 amd64 1.9.9+dfsg-2+b1 [474 kB]
-Get:427 http://deb.debian.org/debian bookworm/main amd64 indi-dsi amd64 0.4+20221223123028-1 [55.2 kB]
-Get:428 http://deb.debian.org/debian bookworm/main amd64 libklibc amd64 2.0.12-1 [44.2 kB]
-Get:429 http://deb.debian.org/debian bookworm/main amd64 klibc-utils amd64 2.0.12-1 [94.9 kB]
-Get:430 http://deb.debian.org/debian bookworm/main amd64 initramfs-tools-core all 0.142+deb12u3 [48.3 kB]
-Get:431 http://deb.debian.org/debian bookworm/main amd64 initramfs-tools all 0.142+deb12u3 [16.0 kB]
-Get:432 http://deb.debian.org/debian bookworm/main amd64 libigdgmm12 amd64 22.3.3+ds1-1 [139 kB]
-Get:433 http://deb.debian.org/debian bookworm/main amd64 intel-media-va-driver amd64 23.1.1+dfsg1-1 [2882 kB]
+m/main amd64 intel-media-va-driver amd64 23.1.1+dfsg1-1 [2882 kB]
 Get:434 http://deb.debian.org/debian bookworm/main amd64 inxi all 3.3.26-1-1 [525 kB]
 Get:435 http://deb.debian.org/debian bookworm/main amd64 iw amd64 5.19-1 [104 kB]
 Get:436 http://deb.debian.org/debian bookworm/main amd64 ixo-usb-jtag all 0.0.1-2 [10.9 kB]
@@ -709,7 +144,7 @@ Preconfiguring packages ...
 cat: '/sys/bus/usb/devices/*:*/bInterfaceClass': No such file or directory
 cat: '/sys/bus/usb/devices/*:*/bInterfaceSubClass': No such file or directory
 cat: '/sys/bus/usb/devices/*:*/bInterfaceProtocol': No such file or directory
-Fetched 719 MB in 4s (171 MB/s)
+Fetched 719 MB in 35s (20.5 MB/s)
 Selecting previously unselected package libdbus-1-3:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 8747 files and directories currently installed.)
 Preparing to unpack .../00-libdbus-1-3_1.14.10-1~deb12u1_amd64.deb ...
@@ -3140,7 +2575,7 @@ live-boot: core filesystems dm-verity devices utils udev blockdev dns.
 Reading package lists...
 Building dependency tree...
 Reading state information...
-[2026-06-12 16:22:12] lb chroot_package-lists live
+[2026-06-12 16:37:01] lb chroot_package-lists live
 P: Begin queueing installation of package lists (live pass)...
 Reading package lists...
 Building dependency tree...
@@ -3171,7 +2606,7 @@ Purging configuration files for dctrl-tools (2.24-3+b1) ...
 Reading package lists...
 Building dependency tree...
 Reading state information...
-[2026-06-12 16:22:14] lb chroot_install-packages live
+[2026-06-12 16:37:03] lb chroot_install-packages live
 P: Begin installing packages (live pass)...
 Reading package lists...
 Building dependency tree...
@@ -3244,47 +2679,70 @@ fonts-terminus is already the newest version (1.2.0+ds2-1+b1).
 Reading package lists...
 Building dependency tree...
 Reading state information...
-[2026-06-12 16:22:15] lb chroot_includes_after_packages 
+[2026-06-12 16:37:05] lb chroot_includes_after_packages 
 P: Begin copying chroot includes after packages have been installed...
-P: Creating a tarball with files from includes.chroot...
-P: Extracting the tarball in the chroot...
-./
-./usr/
-./usr/share/
-./usr/share/plymouth/
-./usr/share/plymouth/themes/
-./usr/share/plymouth/themes/zenvx/
-./usr/share/plymouth/themes/zenvx/zenvx.plymouth
-./usr/share/plymouth/themes/zenvx/zenvx.script
-./usr/share/zenvx/
-./usr/share/zenvx/config.default.json
-./usr/share/zenvx/grub-theme.txt
-./usr/local/
-./usr/local/bin/
-./usr/local/bin/zenvx-detect-hardware
-./usr/local/bin/zenvx-install
-./usr/local/bin/zenvx-model-selector
-./usr/local/bin/zenvx-firstboot
-./usr/local/bin/zenvx-download-model
-./usr/local/bin/zenvx
-./etc/
-./etc/skel/
-./etc/skel/.bashrc
-./etc/systemd/
-./etc/systemd/system/
-./etc/systemd/system/zenvx-firstboot.service
-./etc/systemd/system/zenvx-agent.service
-./etc/systemd/system/zenvx-log-manager.timer
-./etc/systemd/system/getty@tty1.service.d/
-./etc/systemd/system/getty@tty1.service.d/override.conf
-./etc/systemd/system/zenvx-log-manager.service
-./etc/sudoers.d/
-./etc/sudoers.d/zenvx
-./etc/profile.d/
-./etc/profile.d/zenvx-live.sh
-./etc/zenvx/
-./etc/zenvx/motd
-[2026-06-12 16:22:15] lb chroot_hooks 
+P: Copying includes.chroot into chroot using rsync...
+sending incremental file list
+etc/profile.d/zenvx-live.sh
+etc/skel/.bashrc
+etc/sudoers.d/zenvx
+etc/systemd/system/zenvx-agent.service
+etc/systemd/system/zenvx-firstboot.service
+etc/systemd/system/zenvx-log-manager.service
+etc/systemd/system/zenvx-log-manager.timer
+etc/systemd/system/getty@tty1.service.d/
+etc/systemd/system/getty@tty1.service.d/override.conf
+etc/zenvx/
+etc/zenvx/motd
+opt/zenvx/
+opt/zenvx/__init__.py
+opt/zenvx/agent_integrated.py
+opt/zenvx/requirements.txt
+opt/zenvx/inference/
+opt/zenvx/inference/__init__.py
+opt/zenvx/inference/cache_manager.py
+opt/zenvx/inference/conversation_manager.py
+opt/zenvx/inference/error_recovery.py
+opt/zenvx/inference/llm_engine.py
+opt/zenvx/inference/memory_manager.py
+opt/zenvx/inference/persistence.py
+opt/zenvx/inference/sensory_pipeline.py
+opt/zenvx/inference/streaming.py
+opt/zenvx/inference/tool_chain.py
+opt/zenvx/inference/undo_manager.py
+opt/zenvx/monitoring/
+opt/zenvx/monitoring/__init__.py
+opt/zenvx/monitoring/dashboard.py
+opt/zenvx/monitoring/integration.py
+opt/zenvx/monitoring/log_manager.py
+opt/zenvx/monitoring/metrics_collector.py
+opt/zenvx/tools/
+opt/zenvx/tools/__init__.py
+opt/zenvx/tools/ecommerce_handler.py
+opt/zenvx/tools/executor.py
+opt/zenvx/tools/logger.py
+opt/zenvx/tools/payment_handler.py
+opt/zenvx/tools/permission_handler.py
+opt/zenvx/tools/request_limiter.py
+opt/zenvx/tools/session_manager.py
+opt/zenvx/tools/web_browser.py
+opt/zenvx/tools/web_search.py
+usr/local/bin/zenvx
+usr/local/bin/zenvx-detect-hardware
+usr/local/bin/zenvx-download-model
+usr/local/bin/zenvx-firstboot
+usr/local/bin/zenvx-install
+usr/local/bin/zenvx-model-selector
+usr/share/plymouth/themes/zenvx/
+usr/share/plymouth/themes/zenvx/zenvx.plymouth
+usr/share/plymouth/themes/zenvx/zenvx.script
+usr/share/zenvx/
+usr/share/zenvx/config.default.json
+usr/share/zenvx/grub-theme.txt
+
+sent 84,080 bytes  received 981 bytes  170,122.00 bytes/sec
+total size is 79,968  speedup is 0.94
+[2026-06-12 16:37:05] lb chroot_hooks 
 P: Begin executing hooks...
 P: Executing hook config/hooks/normal/1000-create-mtab-symlink.hook.chroot...
 P: Executing hook config/hooks/normal/1010-enable-cryptsetup.hook.chroot...
@@ -3321,7 +2779,7 @@ passwd: password changed.
 [zenvx 0100] installing python dependencies
 Collecting llama-cpp-python
   Downloading llama_cpp_python-0.3.28.tar.gz (68.3 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 68.3/68.3 MB 192.9 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 68.3/68.3 MB 159.5 MB/s eta 0:00:00
   Installing build dependencies: started
   Installing build dependencies: finished with status 'done'
   Getting requirements to build wheel: started
@@ -3332,135 +2790,135 @@ Collecting llama-cpp-python
   Preparing metadata (pyproject.toml): finished with status 'done'
 Collecting playwright
   Downloading playwright-1.60.0-py3-none-manylinux1_x86_64.whl (47.5 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 47.5/47.5 MB 325.0 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 47.5/47.5 MB 267.5 MB/s eta 0:00:00
 Collecting faster-whisper
   Downloading faster_whisper-1.2.1-py3-none-any.whl (1.1 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 356.0 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 306.8 MB/s eta 0:00:00
 Collecting duckduckgo-search
   Downloading duckduckgo_search-8.1.1-py3-none-any.whl (18 kB)
 Collecting cryptography
   Downloading cryptography-48.0.1-cp311-abi3-manylinux_2_34_x86_64.whl (4.7 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 347.0 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 257.5 MB/s eta 0:00:00
 Collecting psutil
   Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 155.6/155.6 kB 323.6 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 155.6/155.6 kB 343.9 MB/s eta 0:00:00
 Collecting mss
   Downloading mss-10.2.0-py3-none-any.whl (67 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.1/67.1 kB 285.4 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.1/67.1 kB 305.2 MB/s eta 0:00:00
 Collecting Pillow
   Downloading pillow-12.2.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.1 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.1/7.1 MB 176.8 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.1/7.1 MB 262.4 MB/s eta 0:00:00
 Collecting sounddevice
   Downloading sounddevice-0.5.5-py3-none-any.whl (32 kB)
 Collecting soundfile
   Downloading soundfile-0.14.0-py2.py3-none-manylinux_2_28_x86_64.whl (1.3 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 307.3 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 306.1 MB/s eta 0:00:00
 Collecting typing-extensions>=4.5.0
   Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 229.5 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 228.0 MB/s eta 0:00:00
 Collecting numpy>=1.20.0
   Downloading numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 313.6 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 318.3 MB/s eta 0:00:00
 Collecting diskcache>=5.6.1
   Downloading diskcache-5.6.3-py3-none-any.whl (45 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.5/45.5 kB 200.8 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.5/45.5 kB 182.5 MB/s eta 0:00:00
 Collecting jinja2>=2.11.3
   Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 325.5 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 335.9 MB/s eta 0:00:00
 Collecting pyee<14,>=13
   Downloading pyee-13.0.1-py3-none-any.whl (15 kB)
 Collecting greenlet<4.0.0,>=3.1.1
   Downloading greenlet-3.5.1-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (614 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 614.8/614.8 kB 323.1 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 614.8/614.8 kB 353.1 MB/s eta 0:00:00
 Collecting ctranslate2<5,>=4.0
   Downloading ctranslate2-4.8.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (39.3 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 39.3/39.3 MB 228.2 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 39.3/39.3 MB 195.1 MB/s eta 0:00:00
 Collecting huggingface-hub>=0.21
   Downloading huggingface_hub-1.19.0-py3-none-any.whl (693 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 693.4/693.4 kB 354.6 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 693.4/693.4 kB 348.8 MB/s eta 0:00:00
 Collecting tokenizers<1,>=0.13
   Downloading tokenizers-0.23.1-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 347.9 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 228.9 MB/s eta 0:00:00
 Collecting onnxruntime<2,>=1.14
   Downloading onnxruntime-1.26.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (18.2 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.2/18.2 MB 212.2 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.2/18.2 MB 221.9 MB/s eta 0:00:00
 Collecting av>=11
   Downloading av-17.1.0-cp311-abi3-manylinux_2_28_x86_64.whl (35.4 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.4/35.4 MB 263.3 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.4/35.4 MB 320.8 MB/s eta 0:00:00
 Collecting tqdm
   Downloading tqdm-4.68.2-py3-none-any.whl (78 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.6/78.6 kB 282.7 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.6/78.6 kB 258.0 MB/s eta 0:00:00
 Collecting click>=8.1.8
   Downloading click-8.4.1-py3-none-any.whl (116 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 116.6/116.6 kB 339.4 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 116.6/116.6 kB 301.6 MB/s eta 0:00:00
 Collecting primp>=0.15.0
   Downloading primp-1.3.1-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (5.3 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.3/5.3 MB 225.4 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.3/5.3 MB 225.0 MB/s eta 0:00:00
 Collecting lxml>=5.3.0
   Downloading lxml-6.1.1-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.2 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.2/5.2 MB 215.4 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.2/5.2 MB 223.0 MB/s eta 0:00:00
 Collecting cffi>=2.0.0
   Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (215 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 215.6/215.6 kB 357.1 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 215.6/215.6 kB 348.5 MB/s eta 0:00:00
 Collecting pycparser
   Downloading pycparser-3.0-py3-none-any.whl (48 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.2/48.2 kB 196.7 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.2/48.2 kB 247.3 MB/s eta 0:00:00
 Requirement already satisfied: setuptools in /usr/lib/python3/dist-packages (from ctranslate2<5,>=4.0->faster-whisper) (66.1.1)
 Collecting pyyaml<7,>=5.3
   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 240.9 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 331.4 MB/s eta 0:00:00
 Collecting filelock>=3.10.0
   Downloading filelock-3.29.3-py3-none-any.whl (42 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.3/42.3 kB 255.1 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.3/42.3 kB 234.1 MB/s eta 0:00:00
 Collecting fsspec>=2023.5.0
   Downloading fsspec-2026.4.0-py3-none-any.whl (203 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 203.4/203.4 kB 332.5 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 203.4/203.4 kB 319.0 MB/s eta 0:00:00
 Collecting hf-xet<2.0.0,>=1.5.1
   Downloading hf_xet-1.5.1-cp37-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.5 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 349.7 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 340.5 MB/s eta 0:00:00
 Collecting httpx<1,>=0.23.0
   Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.5/73.5 kB 307.6 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.5/73.5 kB 291.6 MB/s eta 0:00:00
 Collecting packaging>=20.9
   Downloading packaging-26.2-py3-none-any.whl (100 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.2/100.2 kB 335.0 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.2/100.2 kB 317.7 MB/s eta 0:00:00
 Collecting typer<0.26.0,>=0.20.0
   Downloading typer-0.25.1-py3-none-any.whl (58 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.4/58.4 kB 238.7 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.4/58.4 kB 284.0 MB/s eta 0:00:00
 Collecting MarkupSafe>=2.0
   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
 Collecting flatbuffers
   Downloading flatbuffers-25.12.19-py2.py3-none-any.whl (26 kB)
 Collecting protobuf
   Downloading protobuf-7.35.1-cp310-abi3-manylinux2014_x86_64.whl (327 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 327.1/327.1 kB 380.4 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 327.1/327.1 kB 356.9 MB/s eta 0:00:00
 Collecting anyio
   Downloading anyio-4.13.0-py3-none-any.whl (114 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 114.4/114.4 kB 287.6 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 114.4/114.4 kB 326.9 MB/s eta 0:00:00
 Collecting certifi
   Downloading certifi-2026.5.20-py3-none-any.whl (134 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.1/134.1 kB 334.8 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.1/134.1 kB 333.1 MB/s eta 0:00:00
 Collecting httpcore==1.*
   Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.8/78.8 kB 316.5 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.8/78.8 kB 306.6 MB/s eta 0:00:00
 Collecting idna
   Downloading idna-3.18-py3-none-any.whl (65 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 65.5/65.5 kB 303.0 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 65.5/65.5 kB 261.6 MB/s eta 0:00:00
 Collecting h11>=0.16
   Downloading h11-0.16.0-py3-none-any.whl (37 kB)
 Collecting shellingham>=1.3.0
   Downloading shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
 Collecting rich>=13.8.0
   Downloading rich-15.0.0-py3-none-any.whl (310 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 310.7/310.7 kB 330.4 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 310.7/310.7 kB 306.9 MB/s eta 0:00:00
 Collecting annotated-doc>=0.0.2
   Downloading annotated_doc-0.0.4-py3-none-any.whl (5.3 kB)
 Collecting markdown-it-py>=2.2.0
   Downloading markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.7/91.7 kB 314.5 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.7/91.7 kB 331.4 MB/s eta 0:00:00
 Collecting pygments<3.0.0,>=2.13.0
   Downloading pygments-2.20.0-py3-none-any.whl (1.2 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 367.7 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 321.7 MB/s eta 0:00:00
 Collecting mdurl~=0.1
   Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
 Building wheels for collected packages: llama-cpp-python
@@ -3469,8 +2927,8 @@ Building wheels for collected packages: llama-cpp-python
   Building wheel for llama-cpp-python (pyproject.toml): still running...
   Building wheel for llama-cpp-python (pyproject.toml): still running...
   Building wheel for llama-cpp-python (pyproject.toml): finished with status 'done'
-  Created wheel for llama-cpp-python: filename=llama_cpp_python-0.3.28-py3-none-linux_x86_64.whl size=18897610 sha256=5143e8d1d6e0b488bc1ffd0dabfd11c38944ba498936f3a90a67e822cec1d35d
-  Stored in directory: /tmp/pip-ephem-wheel-cache-ebfiww87/wheels/b3/60/9d/a462dc55931593a50b1a8c87ad15dbae8e13b8ec89d9f26ca9
+  Created wheel for llama-cpp-python: filename=llama_cpp_python-0.3.28-py3-none-linux_x86_64.whl size=18897599 sha256=2f624a1f49fc64bd94670a4d584a8e4e28c8efe76196efd12b91e88408dad76b
+  Stored in directory: /tmp/pip-ephem-wheel-cache-kkcy6vhg/wheels/b3/60/9d/a462dc55931593a50b1a8c87ad15dbae8e13b8ec89d9f26ca9
 Successfully built llama-cpp-python
 Installing collected packages: flatbuffers, typing-extensions, tqdm, shellingham, pyyaml, pygments, pycparser, psutil, protobuf, primp, Pillow, packaging, numpy, mss, mdurl, MarkupSafe, lxml, idna, hf-xet, h11, greenlet, fsspec, filelock, diskcache, click, certifi, av, annotated-doc, pyee, onnxruntime, markdown-it-py, jinja2, httpcore, duckduckgo-search, ctranslate2, cffi, anyio, soundfile, sounddevice, rich, playwright, llama-cpp-python, httpx, cryptography, typer, huggingface-hub, tokenizers, faster-whisper
 Successfully installed MarkupSafe-3.0.3 Pillow-12.2.0 annotated-doc-0.0.4 anyio-4.13.0 av-17.1.0 certifi-2026.5.20 cffi-2.0.0 click-8.4.1 cryptography-48.0.1 ctranslate2-4.8.0 diskcache-5.6.3 duckduckgo-search-8.1.1 faster-whisper-1.2.1 filelock-3.29.3 flatbuffers-25.12.19 fsspec-2026.4.0 greenlet-3.5.1 h11-0.16.0 hf-xet-1.5.1 httpcore-1.0.9 httpx-0.28.1 huggingface-hub-1.19.0 idna-3.18 jinja2-3.1.6 llama-cpp-python-0.3.28 lxml-6.1.1 markdown-it-py-4.2.0 mdurl-0.1.2 mss-10.2.0 numpy-2.4.6 onnxruntime-1.26.0 packaging-26.2 playwright-1.60.0 primp-1.3.1 protobuf-7.35.1 psutil-7.2.2 pycparser-3.0 pyee-13.0.1 pygments-2.20.0 pyyaml-6.0.3 rich-15.0.0 shellingham-1.5.4 sounddevice-0.5.5 soundfile-0.14.0 tokenizers-0.23.1 tqdm-4.68.2 typer-0.25.1 typing-extensions-4.15.0
@@ -3558,7 +3016,7 @@ Get:22 http://deb.debian.org/debian bookworm/main amd64 xfonts-utils amd64 1:7.7
 Get:23 http://deb.debian.org/debian bookworm/main amd64 xfonts-scalable all 1:1.0.3-1.3 [306 kB]
 Get:24 http://deb.debian.org/debian bookworm/main amd64 xserver-common all 2:21.1.7-3+deb12u12 [2384 kB]
 Get:25 http://deb.debian.org/debian bookworm/main amd64 xvfb amd64 2:21.1.7-3+deb12u12 [3154 kB]
-Fetched 35.5 MB in 0s (168 MB/s)
+Fetched 35.5 MB in 0s (188 MB/s)
 Selecting previously unselected package fonts-ipafont-gothic.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45496 files and directories currently installed.)
 Preparing to unpack .../00-fonts-ipafont-gothic_00303-23_all.deb ...
@@ -3717,35 +3175,849 @@ Generation complete.
 [zenvx 0100] done
 P: Executing hook config/hooks/live/0200-zenvx-source.hook.chroot...
 [zenvx 0200] verifying required source files
-[zenvx 0200] MISSING: /opt/zenvx/agent_integrated.py
-[zenvx 0200] MISSING: /opt/zenvx/inference/llm_engine.py
-[zenvx 0200] MISSING: /opt/zenvx/inference/memory_manager.py
-[zenvx 0200] MISSING: /opt/zenvx/inference/conversation_manager.py
-[zenvx 0200] MISSING: /opt/zenvx/inference/tool_chain.py
-[zenvx 0200] MISSING: /opt/zenvx/inference/error_recovery.py
-[zenvx 0200] MISSING: /opt/zenvx/inference/cache_manager.py
-[zenvx 0200] MISSING: /opt/zenvx/inference/sensory_pipeline.py
-[zenvx 0200] MISSING: /opt/zenvx/inference/streaming.py
-[zenvx 0200] MISSING: /opt/zenvx/inference/persistence.py
-[zenvx 0200] MISSING: /opt/zenvx/inference/undo_manager.py
-[zenvx 0200] MISSING: /opt/zenvx/tools/executor.py
-[zenvx 0200] MISSING: /opt/zenvx/tools/permission_handler.py
-[zenvx 0200] MISSING: /opt/zenvx/tools/logger.py
-[zenvx 0200] MISSING: /opt/zenvx/tools/web_browser.py
-[zenvx 0200] MISSING: /opt/zenvx/tools/web_search.py
-[zenvx 0200] MISSING: /opt/zenvx/tools/ecommerce_handler.py
-[zenvx 0200] MISSING: /opt/zenvx/tools/request_limiter.py
-[zenvx 0200] MISSING: /opt/zenvx/tools/session_manager.py
-[zenvx 0200] MISSING: /opt/zenvx/tools/payment_handler.py
-[zenvx 0200] MISSING: /opt/zenvx/monitoring/metrics_collector.py
-[zenvx 0200] MISSING: /opt/zenvx/monitoring/log_manager.py
-[zenvx 0200] MISSING: /opt/zenvx/monitoring/integration.py
-[zenvx 0200] MISSING: /opt/zenvx/monitoring/dashboard.py
-[zenvx 0200] ERROR: required source files missing
-E: config/hooks/live/0200-zenvx-source.hook.chroot failed (exit non-zero). You should check for errors.
-E: An unexpected failure occurred, exiting...
+[zenvx 0200] byte-compiling all python sources
+/root/0200-zenvx-source.hook.chroot: 47: read: Illegal option -d
+[zenvx 0200] setting final ownership
+[zenvx 0200] done
+P: Executing hook config/hooks/live/9999-cleanup.hook.chroot...
+[zenvx 9999] removing python caches
+[zenvx 9999] removing pip caches
+[zenvx 9999] apt cleanup
+[zenvx 9999] truncating build logs
+[zenvx 9999] clearing temp
+[zenvx 9999] done
+Reading package lists...
+Building dependency tree...
+Reading state information...
+[2026-06-12 16:41:24] lb chroot_hacks 
+P: Begin executing hacks...
+update-initramfs: Generating /boot/initrd.img-6.1.0-49-amd64
+live-boot: core filesystems dm-verity devices utils udev blockdev dns.
+[2026-06-12 16:41:55] lb chroot_interactive 
+[2026-06-12 16:41:55] lb chroot_prep remove all mode-archives-chroot
+[2026-06-12 16:41:55] lb chroot_archives chroot remove
+P: Deconfiguring file /etc/apt/sources.list
+Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+Get:3 http://security.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+Get:4 http://deb.debian.org/debian bookworm/non-free Sources [78.0 kB]
+Get:5 http://deb.debian.org/debian bookworm/non-free-firmware Sources [7152 B]
+Get:6 http://deb.debian.org/debian bookworm/contrib Sources [51.1 kB]
+Get:7 http://deb.debian.org/debian bookworm/main Sources [9490 kB]
+Get:8 http://deb.debian.org/debian bookworm/main amd64 Packages [8790 kB]
+Get:9 http://deb.debian.org/debian bookworm/main Translation-en [6107 kB]
+Get:10 http://deb.debian.org/debian bookworm/contrib amd64 Packages [53.5 kB]
+Get:11 http://deb.debian.org/debian bookworm/contrib Translation-en [48.4 kB]
+Get:12 http://deb.debian.org/debian bookworm/non-free amd64 Packages [102 kB]
+Get:13 http://deb.debian.org/debian bookworm/non-free Translation-en [68.2 kB]
+Get:14 http://deb.debian.org/debian bookworm/non-free-firmware amd64 Packages [6368 B]
+Get:15 http://deb.debian.org/debian bookworm/non-free-firmware Translation-en [20.9 kB]
+Get:16 http://deb.debian.org/debian bookworm-updates/main Sources [3288 B]
+Get:17 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [6924 B]
+Get:18 http://deb.debian.org/debian bookworm-updates/main Translation-en [5448 B]
+Get:19 http://security.debian.org/debian-security bookworm-security/contrib Sources [856 B]
+Get:20 http://security.debian.org/debian-security bookworm-security/non-free-firmware Sources [796 B]
+Get:21 http://security.debian.org/debian-security bookworm-security/main Sources [210 kB]
+Get:22 http://security.debian.org/debian-security bookworm-security/main amd64 Packages [312 kB]
+Get:23 http://security.debian.org/debian-security bookworm-security/main Translation-en [191 kB]
+Get:24 http://security.debian.org/debian-security bookworm-security/contrib amd64 Packages [896 B]
+Get:25 http://security.debian.org/debian-security bookworm-security/contrib Translation-en [652 B]
+Get:26 http://security.debian.org/debian-security bookworm-security/non-free-firmware amd64 Packages [688 B]
+Get:27 http://security.debian.org/debian-security bookworm-security/non-free-firmware Translation-en [472 B]
+Fetched 25.8 MB in 2s (11.9 MB/s)
+Reading package lists...
+[2026-06-12 16:41:58] lb chroot_apt remove
+P: Deconfiguring file /etc/apt/apt.conf
+[2026-06-12 16:41:58] lb chroot_hostname remove
+P: Deconfiguring file /etc/hostname
+P: Deconfiguring file /bin/hostname
+[2026-06-12 16:41:58] lb chroot_resolv remove
+P: Deconfiguring file /etc/resolv.conf
+[2026-06-12 16:41:58] lb chroot_hosts remove
+P: Deconfiguring file /etc/hosts
+[2026-06-12 16:41:58] lb chroot_sysv-rc remove
+P: Deconfiguring file /usr/sbin/policy-rc.d
+[2026-06-12 16:41:58] lb chroot_tmpfs remove
+[2026-06-12 16:41:58] lb chroot_dpkg remove
+P: Deconfiguring file /sbin/start-stop-daemon
+[2026-06-12 16:41:58] lb chroot_debianchroot remove
+P: Deconfiguring file /etc/debian_chroot
+[2026-06-12 16:41:58] lb chroot_sysfs remove
+P: Begin unmounting /sys...
+[2026-06-12 16:41:58] lb chroot_selinuxfs remove
+[2026-06-12 16:41:58] lb chroot_proc remove
+P: Begin unmounting /proc...
+[2026-06-12 16:41:58] lb chroot_devpts remove
+P: Begin unmounting /dev/pts...
+[2026-06-12 16:41:58] lb chroot_cache save
+P: Chroot stage completed
 P: Begin unmounting filesystems...
 P: Saving caches...
 Reading package lists...
 Building dependency tree...
 Reading state information...
+[2026-06-12 16:41:59] lb installer 
+P: Setting up clean exit handler
+[2026-06-12 16:41:59] lb installer_chroot 
+P: Begin copying chroot for the installer...
+[2026-06-12 16:41:59] lb chroot_prep install all mode-archives-chroot
+[2026-06-12 16:41:59] lb chroot_devpts install
+P: Begin mounting /dev/pts...
+[2026-06-12 16:41:59] lb chroot_proc install
+P: Begin mounting /proc...
+[2026-06-12 16:41:59] lb chroot_selinuxfs install
+[2026-06-12 16:41:59] lb chroot_sysfs install
+P: Begin mounting /sys...
+[2026-06-12 16:41:59] lb chroot_debianchroot install
+P: Configuring file /etc/debian_chroot
+[2026-06-12 16:41:59] lb chroot_dpkg install
+P: Configuring file /sbin/start-stop-daemon
+dpkg-divert: warning: diverting file '/sbin/start-stop-daemon' from an Essential package with rename is dangerous, use --no-rename
+[2026-06-12 16:41:59] lb chroot_tmpfs install
+[2026-06-12 16:42:00] lb chroot_sysv-rc install
+P: Configuring file /usr/sbin/policy-rc.d
+[2026-06-12 16:42:00] lb chroot_hosts install
+P: Configuring file /etc/hosts
+[2026-06-12 16:42:00] lb chroot_resolv install
+P: Configuring file /etc/resolv.conf
+[2026-06-12 16:42:00] lb chroot_hostname install
+P: Configuring file /etc/hostname
+P: Configuring file /bin/hostname
+dpkg-divert: warning: diverting file '/bin/hostname' from an Essential package with rename is dangerous, use --no-rename
+[2026-06-12 16:42:00] lb chroot_apt install
+P: Configuring file /etc/apt/apt.conf
+[2026-06-12 16:42:00] lb chroot_archives chroot install
+P: Configuring file /etc/apt/sources.list
+Get:1 http://security.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+Hit:2 http://deb.debian.org/debian bookworm InRelease
+Get:3 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+Get:4 http://deb.debian.org/debian bookworm/contrib Sources [51.1 kB]
+Get:5 http://deb.debian.org/debian bookworm/main Sources [9490 kB]
+Get:6 http://deb.debian.org/debian bookworm/non-free Sources [78.0 kB]
+Get:7 http://deb.debian.org/debian bookworm/non-free-firmware Sources [7152 B]
+Get:8 http://deb.debian.org/debian bookworm/main Translation-en [6107 kB]
+Get:9 http://deb.debian.org/debian bookworm/contrib Translation-en [48.4 kB]
+Get:10 http://deb.debian.org/debian bookworm/non-free Translation-en [68.2 kB]
+Get:11 http://deb.debian.org/debian bookworm/non-free-firmware Translation-en [20.9 kB]
+Get:12 http://deb.debian.org/debian bookworm-updates/main Sources [3288 B]
+Get:13 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [6924 B]
+Get:14 http://deb.debian.org/debian bookworm-updates/main Translation-en [5448 B]
+Get:15 http://security.debian.org/debian-security bookworm-security/non-free-firmware Sources [796 B]
+Get:16 http://security.debian.org/debian-security bookworm-security/contrib Sources [856 B]
+Get:17 http://security.debian.org/debian-security bookworm-security/main Sources [210 kB]
+Get:18 http://security.debian.org/debian-security bookworm-security/main amd64 Packages [312 kB]
+Get:19 http://security.debian.org/debian-security bookworm-security/main Translation-en [191 kB]
+Get:20 http://security.debian.org/debian-security bookworm-security/contrib amd64 Packages [896 B]
+Get:21 http://security.debian.org/debian-security bookworm-security/contrib Translation-en [652 B]
+Get:22 http://security.debian.org/debian-security bookworm-security/non-free-firmware amd64 Packages [688 B]
+Get:23 http://security.debian.org/debian-security bookworm-security/non-free-firmware Translation-en [472 B]
+Fetched 16.7 MB in 1s (11.6 MB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+debian-archive-keyring is already the newest version (2023.3+deb12u2).
+0 upgraded, 0 newly installed, 0 to remove and 7 not upgraded.
+Hit:1 http://deb.debian.org/debian bookworm InRelease
+Hit:2 http://deb.debian.org/debian bookworm-updates InRelease
+Hit:3 http://security.debian.org/debian-security bookworm-security InRelease
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Calculating upgrade...
+The following packages will be upgraded:
+  libgcrypt20 libgnutls30 libgssapi-krb5-2 libk5crypto3 libkrb5-3
+  libkrb5support0 libssl3
+7 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 0 B/4722 kB of archives.
+After this operation, 6144 B of additional disk space will be used.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 8747 files and directories currently installed.)
+Preparing to unpack .../libgcrypt20_1.10.1-3+deb12u1_amd64.deb ...
+Unpacking libgcrypt20:amd64 (1.10.1-3+deb12u1) over (1.10.1-3) ...
+Setting up libgcrypt20:amd64 (1.10.1-3+deb12u1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 8747 files and directories currently installed.)
+Preparing to unpack .../libgnutls30_3.7.9-2+deb12u7_amd64.deb ...
+Unpacking libgnutls30:amd64 (3.7.9-2+deb12u7) over (3.7.9-2+deb12u6) ...
+Setting up libgnutls30:amd64 (3.7.9-2+deb12u7) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 8747 files and directories currently installed.)
+Preparing to unpack .../libssl3_3.0.20-1~deb12u2_amd64.deb ...
+Unpacking libssl3:amd64 (3.0.20-1~deb12u2) over (3.0.20-1~deb12u1) ...
+Preparing to unpack .../libkrb5support0_1.20.1-2+deb12u5_amd64.deb ...
+Unpacking libkrb5support0:amd64 (1.20.1-2+deb12u5) over (1.20.1-2+deb12u4) ...
+Preparing to unpack .../libk5crypto3_1.20.1-2+deb12u5_amd64.deb ...
+Unpacking libk5crypto3:amd64 (1.20.1-2+deb12u5) over (1.20.1-2+deb12u4) ...
+Preparing to unpack .../libgssapi-krb5-2_1.20.1-2+deb12u5_amd64.deb ...
+Unpacking libgssapi-krb5-2:amd64 (1.20.1-2+deb12u5) over (1.20.1-2+deb12u4) ...
+Preparing to unpack .../libkrb5-3_1.20.1-2+deb12u5_amd64.deb ...
+Unpacking libkrb5-3:amd64 (1.20.1-2+deb12u5) over (1.20.1-2+deb12u4) ...
+Setting up libssl3:amd64 (3.0.20-1~deb12u2) ...
+Setting up libkrb5support0:amd64 (1.20.1-2+deb12u5) ...
+Setting up libk5crypto3:amd64 (1.20.1-2+deb12u5) ...
+Setting up libkrb5-3:amd64 (1.20.1-2+deb12u5) ...
+Setting up libgssapi-krb5-2:amd64 (1.20.1-2+deb12u5) ...
+Processing triggers for libc-bin (2.36-9+deb12u14) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+[2026-06-12 16:42:05] lb installer_debian-installer 
+P: No installer wanted, skipping...
+[2026-06-12 16:42:05] lb installer_preseed 
+[2026-06-12 16:42:05] lb chroot_prep remove all mode-archives-chroot
+[2026-06-12 16:42:05] lb chroot_archives chroot remove
+P: Deconfiguring file /etc/apt/sources.list
+Get:1 http://security.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+Get:2 http://deb.debian.org/debian bookworm InRelease [151 kB]
+Get:3 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+Get:4 http://security.debian.org/debian-security bookworm-security/main Sources [210 kB]
+Get:5 http://security.debian.org/debian-security bookworm-security/non-free-firmware Sources [796 B]
+Get:6 http://security.debian.org/debian-security bookworm-security/contrib Sources [856 B]
+Get:7 http://security.debian.org/debian-security bookworm-security/main amd64 Packages [312 kB]
+Get:8 http://security.debian.org/debian-security bookworm-security/main Translation-en [191 kB]
+Get:9 http://security.debian.org/debian-security bookworm-security/contrib amd64 Packages [896 B]
+Get:10 http://security.debian.org/debian-security bookworm-security/contrib Translation-en [652 B]
+Get:11 http://security.debian.org/debian-security bookworm-security/non-free-firmware amd64 Packages [688 B]
+Get:12 http://security.debian.org/debian-security bookworm-security/non-free-firmware Translation-en [472 B]
+Get:13 http://deb.debian.org/debian bookworm/non-free Sources [78.0 kB]
+Get:14 http://deb.debian.org/debian bookworm/main Sources [9490 kB]
+Get:15 http://deb.debian.org/debian bookworm/contrib Sources [51.1 kB]
+Get:16 http://deb.debian.org/debian bookworm/non-free-firmware Sources [7152 B]
+Get:17 http://deb.debian.org/debian bookworm/main amd64 Packages [8790 kB]
+Get:18 http://deb.debian.org/debian bookworm/main Translation-en [6107 kB]
+Get:19 http://deb.debian.org/debian bookworm/contrib amd64 Packages [53.5 kB]
+Get:20 http://deb.debian.org/debian bookworm/contrib Translation-en [48.4 kB]
+Get:21 http://deb.debian.org/debian bookworm/non-free amd64 Packages [102 kB]
+Get:22 http://deb.debian.org/debian bookworm/non-free Translation-en [68.2 kB]
+Get:23 http://deb.debian.org/debian bookworm/non-free-firmware amd64 Packages [6368 B]
+Get:24 http://deb.debian.org/debian bookworm/non-free-firmware Translation-en [20.9 kB]
+Get:25 http://deb.debian.org/debian bookworm-updates/main Sources [3288 B]
+Get:26 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [6924 B]
+Get:27 http://deb.debian.org/debian bookworm-updates/main Translation-en [5448 B]
+Fetched 25.8 MB in 2s (11.9 MB/s)
+Reading package lists...
+[2026-06-12 16:42:08] lb chroot_apt remove
+P: Deconfiguring file /etc/apt/apt.conf
+[2026-06-12 16:42:08] lb chroot_hostname remove
+P: Deconfiguring file /etc/hostname
+P: Deconfiguring file /bin/hostname
+[2026-06-12 16:42:08] lb chroot_resolv remove
+P: Deconfiguring file /etc/resolv.conf
+[2026-06-12 16:42:08] lb chroot_hosts remove
+P: Deconfiguring file /etc/hosts
+[2026-06-12 16:42:08] lb chroot_sysv-rc remove
+P: Deconfiguring file /usr/sbin/policy-rc.d
+[2026-06-12 16:42:08] lb chroot_tmpfs remove
+[2026-06-12 16:42:08] lb chroot_dpkg remove
+P: Deconfiguring file /sbin/start-stop-daemon
+[2026-06-12 16:42:08] lb chroot_debianchroot remove
+P: Deconfiguring file /etc/debian_chroot
+[2026-06-12 16:42:08] lb chroot_sysfs remove
+P: Begin unmounting /sys...
+[2026-06-12 16:42:08] lb chroot_selinuxfs remove
+[2026-06-12 16:42:08] lb chroot_proc remove
+P: Begin unmounting /proc...
+[2026-06-12 16:42:08] lb chroot_devpts remove
+P: Begin unmounting /dev/pts...
+P: Installer stage completed
+P: Begin unmounting filesystems...
+P: Saving caches...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+[2026-06-12 16:42:09] lb binary 
+P: Setting up clean exit handler
+[2026-06-12 16:42:09] lb binary_chroot 
+P: Begin copying chroot...
+P: This may take a while.
+[2026-06-12 16:42:09] lb chroot_prep install devpts proc selinuxfs sysfs
+[2026-06-12 16:42:09] lb chroot_devpts install
+P: Begin mounting /dev/pts...
+[2026-06-12 16:42:09] lb chroot_proc install
+P: Begin mounting /proc...
+[2026-06-12 16:42:09] lb chroot_selinuxfs install
+[2026-06-12 16:42:10] lb chroot_sysfs install
+P: Begin mounting /sys...
+[2026-06-12 16:42:10] lb chroot_prep install dpkg tmpfs sysv-rc hosts resolv hostname apt mode-apt-install-binary mode-archives-chroot
+[2026-06-12 16:42:10] lb chroot_dpkg install
+P: Configuring file /sbin/start-stop-daemon
+dpkg-divert: warning: diverting file '/sbin/start-stop-daemon' from an Essential package with rename is dangerous, use --no-rename
+[2026-06-12 16:42:10] lb chroot_tmpfs install
+[2026-06-12 16:42:10] lb chroot_sysv-rc install
+P: Configuring file /usr/sbin/policy-rc.d
+[2026-06-12 16:42:10] lb chroot_hosts install
+P: Configuring file /etc/hosts
+[2026-06-12 16:42:10] lb chroot_resolv install
+P: Configuring file /etc/resolv.conf
+[2026-06-12 16:42:10] lb chroot_hostname install
+P: Configuring file /etc/hostname
+P: Configuring file /bin/hostname
+dpkg-divert: warning: diverting file '/bin/hostname' from an Essential package with rename is dangerous, use --no-rename
+[2026-06-12 16:42:10] lb chroot_apt install-binary
+P: Configuring file /etc/apt/apt.conf
+[2026-06-12 16:42:10] lb chroot_archives chroot install
+P: Configuring file /etc/apt/sources.list
+Hit:1 http://deb.debian.org/debian bookworm InRelease
+Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+Get:3 http://security.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+Get:4 http://deb.debian.org/debian bookworm/non-free Sources [78.0 kB]
+Get:5 http://deb.debian.org/debian bookworm/non-free-firmware Sources [7152 B]
+Get:6 http://deb.debian.org/debian bookworm/main Sources [9490 kB]
+Get:7 http://deb.debian.org/debian bookworm/contrib Sources [51.1 kB]
+Get:8 http://deb.debian.org/debian bookworm/main Translation-en [6107 kB]
+Get:9 http://deb.debian.org/debian bookworm/contrib Translation-en [48.4 kB]
+Get:10 http://deb.debian.org/debian bookworm/non-free Translation-en [68.2 kB]
+Get:11 http://deb.debian.org/debian bookworm/non-free-firmware Translation-en [20.9 kB]
+Get:12 http://deb.debian.org/debian bookworm-updates/main Sources [3288 B]
+Get:13 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [6924 B]
+Get:14 http://deb.debian.org/debian bookworm-updates/main Translation-en [5448 B]
+Get:15 http://security.debian.org/debian-security bookworm-security/main Sources [210 kB]
+Get:16 http://security.debian.org/debian-security bookworm-security/contrib Sources [856 B]
+Get:17 http://security.debian.org/debian-security bookworm-security/non-free-firmware Sources [796 B]
+Get:18 http://security.debian.org/debian-security bookworm-security/main amd64 Packages [312 kB]
+Get:19 http://security.debian.org/debian-security bookworm-security/main Translation-en [191 kB]
+Get:20 http://security.debian.org/debian-security bookworm-security/contrib amd64 Packages [896 B]
+Get:21 http://security.debian.org/debian-security bookworm-security/contrib Translation-en [652 B]
+Get:22 http://security.debian.org/debian-security bookworm-security/non-free-firmware amd64 Packages [688 B]
+Get:23 http://security.debian.org/debian-security bookworm-security/non-free-firmware Translation-en [472 B]
+Fetched 16.7 MB in 1s (11.6 MB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+debian-archive-keyring is already the newest version (2023.3+deb12u2).
+0 upgraded, 0 newly installed, 0 to remove and 7 not upgraded.
+Hit:1 http://deb.debian.org/debian bookworm InRelease
+Hit:2 http://deb.debian.org/debian bookworm-updates InRelease
+Hit:3 http://security.debian.org/debian-security bookworm-security InRelease
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Calculating upgrade...
+The following packages will be upgraded:
+  libgcrypt20 libgnutls30 libgssapi-krb5-2 libk5crypto3 libkrb5-3
+  libkrb5support0 libssl3
+7 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 0 B/4722 kB of archives.
+After this operation, 6144 B of additional disk space will be used.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 8747 files and directories currently installed.)
+Preparing to unpack .../libgcrypt20_1.10.1-3+deb12u1_amd64.deb ...
+Unpacking libgcrypt20:amd64 (1.10.1-3+deb12u1) over (1.10.1-3) ...
+Setting up libgcrypt20:amd64 (1.10.1-3+deb12u1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 8747 files and directories currently installed.)
+Preparing to unpack .../libgnutls30_3.7.9-2+deb12u7_amd64.deb ...
+Unpacking libgnutls30:amd64 (3.7.9-2+deb12u7) over (3.7.9-2+deb12u6) ...
+Setting up libgnutls30:amd64 (3.7.9-2+deb12u7) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 8747 files and directories currently installed.)
+Preparing to unpack .../libssl3_3.0.20-1~deb12u2_amd64.deb ...
+Unpacking libssl3:amd64 (3.0.20-1~deb12u2) over (3.0.20-1~deb12u1) ...
+Preparing to unpack .../libkrb5support0_1.20.1-2+deb12u5_amd64.deb ...
+Unpacking libkrb5support0:amd64 (1.20.1-2+deb12u5) over (1.20.1-2+deb12u4) ...
+Preparing to unpack .../libk5crypto3_1.20.1-2+deb12u5_amd64.deb ...
+Unpacking libk5crypto3:amd64 (1.20.1-2+deb12u5) over (1.20.1-2+deb12u4) ...
+Preparing to unpack .../libgssapi-krb5-2_1.20.1-2+deb12u5_amd64.deb ...
+Unpacking libgssapi-krb5-2:amd64 (1.20.1-2+deb12u5) over (1.20.1-2+deb12u4) ...
+Preparing to unpack .../libkrb5-3_1.20.1-2+deb12u5_amd64.deb ...
+Unpacking libkrb5-3:amd64 (1.20.1-2+deb12u5) over (1.20.1-2+deb12u4) ...
+Setting up libssl3:amd64 (3.0.20-1~deb12u2) ...
+Setting up libkrb5support0:amd64 (1.20.1-2+deb12u5) ...
+Setting up libk5crypto3:amd64 (1.20.1-2+deb12u5) ...
+Setting up libkrb5-3:amd64 (1.20.1-2+deb12u5) ...
+Setting up libgssapi-krb5-2:amd64 (1.20.1-2+deb12u5) ...
+Processing triggers for libc-bin (2.36-9+deb12u14) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+[2026-06-12 16:42:15] lb binary_rootfs 
+P: Begin building root filesystem image...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  liblzo2-2
+The following NEW packages will be installed:
+  liblzo2-2 squashfs-tools
+0 upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
+Need to get 240 kB of archives.
+After this operation, 645 kB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian bookworm/main amd64 liblzo2-2 amd64 2.10-2 [56.9 kB]
+Get:2 http://deb.debian.org/debian bookworm/main amd64 squashfs-tools amd64 1:4.5.1-1 [183 kB]
+Fetched 240 kB in 0s (12.0 MB/s)
+Selecting previously unselected package liblzo2-2:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 8747 files and directories currently installed.)
+Preparing to unpack .../liblzo2-2_2.10-2_amd64.deb ...
+Unpacking liblzo2-2:amd64 (2.10-2) ...
+Selecting previously unselected package squashfs-tools.
+Preparing to unpack .../squashfs-tools_1%3a4.5.1-1_amd64.deb ...
+Unpacking squashfs-tools (1:4.5.1-1) ...
+Setting up liblzo2-2:amd64 (2.10-2) ...
+Setting up squashfs-tools (1:4.5.1-1) ...
+Processing triggers for libc-bin (2.36-9+deb12u14) ...
+P: Preparing squashfs image...
+P: This may take a while.
+Unrecognised xattr prefix system.posix_acl_access
+Unrecognised xattr prefix system.posix_acl_default
+Parallel mksquashfs: Using 4 processors
+Creating 4.0 filesystem on filesystem.squashfs, block size 131072.
+
+Exportable Squashfs 4.0 filesystem, xz compressed, data block size 131072
+	compressed data, compressed metadata, compressed fragments,
+	compressed xattrs, compressed ids
+	duplicates are removed
+Filesystem size 1442971.76 Kbytes (1409.15 Mbytes)
+	32.54% of uncompressed filesystem size (4434153.03 Kbytes)
+Inode table size 529092 bytes (516.69 Kbytes)
+	25.48% of uncompressed inode table size (2076359 bytes)
+Directory table size 522616 bytes (510.37 Kbytes)
+	37.54% of uncompressed directory table size (1392089 bytes)
+Xattr table size 78 bytes (0.08 Kbytes)
+	97.50% of uncompressed xattr table size (80 bytes)
+Number of duplicate files found 3110
+Number of inodes 59180
+Number of files 48557
+Number of fragments 4942
+Number of symbolic links 5228
+Number of device nodes 8
+Number of fifo nodes 0
+Number of socket nodes 0
+Number of directories 5387
+Number of hard-links 27
+Number of ids (unique uids + gids) 17
+Number of uids 7
+	root (0)
+	unknown (997)
+	unknown (1000)
+	unknown (101)
+	unknown (999)
+	systemd-network (998)
+	unknown (100)
+Number of gids 15
+	root (0)
+	dip (30)
+	shadow (42)
+	unknown (1000)
+	crontab (101)
+	systemd-journal (999)
+	nogroup (65534)
+	systemd-network (998)
+	unknown (109)
+	unknown (108)
+	utmp (43)
+	staff (50)
+	unknown (107)
+	adm (4)
+	mail (8)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages will be REMOVED:
+  liblzo2-2* squashfs-tools*
+0 upgraded, 0 newly installed, 2 to remove and 0 not upgraded.
+After this operation, 645 kB disk space will be freed.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 8768 files and directories currently installed.)
+Removing squashfs-tools (1:4.5.1-1) ...
+Removing liblzo2-2:amd64 (2.10-2) ...
+Processing triggers for libc-bin (2.36-9+deb12u14) ...
+[2026-06-12 16:47:18] lb chroot_prep remove all mode-archives-binary
+[2026-06-12 16:47:18] lb chroot_archives binary remove
+P: Deconfiguring file /etc/apt/sources.list
+Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+Get:2 http://security.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+Get:3 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+Get:4 http://security.debian.org/debian-security bookworm-security/non-free-firmware Sources [796 B]
+Get:5 http://security.debian.org/debian-security bookworm-security/contrib Sources [856 B]
+Get:6 http://security.debian.org/debian-security bookworm-security/main Sources [210 kB]
+Get:7 http://security.debian.org/debian-security bookworm-security/main amd64 Packages [312 kB]
+Get:8 http://security.debian.org/debian-security bookworm-security/main Translation-en [191 kB]
+Get:9 http://security.debian.org/debian-security bookworm-security/contrib amd64 Packages [896 B]
+Get:10 http://security.debian.org/debian-security bookworm-security/contrib Translation-en [652 B]
+Get:11 http://security.debian.org/debian-security bookworm-security/non-free-firmware amd64 Packages [688 B]
+Get:12 http://security.debian.org/debian-security bookworm-security/non-free-firmware Translation-en [472 B]
+Get:13 http://deb.debian.org/debian bookworm/non-free-firmware Sources [7152 B]
+Get:14 http://deb.debian.org/debian bookworm/main Sources [9490 kB]
+Get:15 http://deb.debian.org/debian bookworm/non-free Sources [78.0 kB]
+Get:16 http://deb.debian.org/debian bookworm/contrib Sources [51.1 kB]
+Get:17 http://deb.debian.org/debian bookworm/main amd64 Packages [8790 kB]
+Get:18 http://deb.debian.org/debian bookworm/main Translation-en [6107 kB]
+Get:19 http://deb.debian.org/debian bookworm/contrib amd64 Packages [53.5 kB]
+Get:20 http://deb.debian.org/debian bookworm/contrib Translation-en [48.4 kB]
+Get:21 http://deb.debian.org/debian bookworm/non-free amd64 Packages [102 kB]
+Get:22 http://deb.debian.org/debian bookworm/non-free Translation-en [68.2 kB]
+Get:23 http://deb.debian.org/debian bookworm/non-free-firmware amd64 Packages [6368 B]
+Get:24 http://deb.debian.org/debian bookworm/non-free-firmware Translation-en [20.9 kB]
+Get:25 http://deb.debian.org/debian bookworm-updates/main Sources [3288 B]
+Get:26 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [6924 B]
+Get:27 http://deb.debian.org/debian bookworm-updates/main Translation-en [5448 B]
+Fetched 25.8 MB in 2s (12.0 MB/s)
+Reading package lists...
+[2026-06-12 16:47:21] lb chroot_apt remove
+P: Deconfiguring file /etc/apt/apt.conf
+[2026-06-12 16:47:21] lb chroot_hostname remove
+P: Deconfiguring file /etc/hostname
+P: Deconfiguring file /bin/hostname
+[2026-06-12 16:47:21] lb chroot_resolv remove
+P: Deconfiguring file /etc/resolv.conf
+[2026-06-12 16:47:21] lb chroot_hosts remove
+P: Deconfiguring file /etc/hosts
+[2026-06-12 16:47:21] lb chroot_sysv-rc remove
+P: Deconfiguring file /usr/sbin/policy-rc.d
+[2026-06-12 16:47:21] lb chroot_tmpfs remove
+[2026-06-12 16:47:21] lb chroot_dpkg remove
+P: Deconfiguring file /sbin/start-stop-daemon
+[2026-06-12 16:47:21] lb chroot_debianchroot remove
+P: Deconfiguring file /etc/debian_chroot
+W: Skipping removal of chroot_debianchroot, it is not applied
+[2026-06-12 16:47:21] lb chroot_sysfs remove
+P: Begin unmounting /sys...
+[2026-06-12 16:47:21] lb chroot_selinuxfs remove
+[2026-06-12 16:47:21] lb chroot_proc remove
+P: Begin unmounting /proc...
+[2026-06-12 16:47:21] lb chroot_devpts remove
+P: Begin unmounting /dev/pts...
+[2026-06-12 16:47:22] lb chroot_prep install all mode-archives-binary
+[2026-06-12 16:47:22] lb chroot_devpts install
+P: Begin mounting /dev/pts...
+[2026-06-12 16:47:22] lb chroot_proc install
+P: Begin mounting /proc...
+[2026-06-12 16:47:22] lb chroot_selinuxfs install
+[2026-06-12 16:47:22] lb chroot_sysfs install
+P: Begin mounting /sys...
+[2026-06-12 16:47:22] lb chroot_debianchroot install
+P: Configuring file /etc/debian_chroot
+[2026-06-12 16:47:22] lb chroot_dpkg install
+P: Configuring file /sbin/start-stop-daemon
+dpkg-divert: warning: diverting file '/sbin/start-stop-daemon' from an Essential package with rename is dangerous, use --no-rename
+[2026-06-12 16:47:22] lb chroot_tmpfs install
+[2026-06-12 16:47:22] lb chroot_sysv-rc install
+P: Configuring file /usr/sbin/policy-rc.d
+[2026-06-12 16:47:22] lb chroot_hosts install
+P: Configuring file /etc/hosts
+[2026-06-12 16:47:22] lb chroot_resolv install
+P: Configuring file /etc/resolv.conf
+[2026-06-12 16:47:22] lb chroot_hostname install
+P: Configuring file /etc/hostname
+P: Configuring file /bin/hostname
+dpkg-divert: warning: diverting file '/bin/hostname' from an Essential package with rename is dangerous, use --no-rename
+[2026-06-12 16:47:22] lb chroot_apt install
+P: Configuring file /etc/apt/apt.conf
+[2026-06-12 16:47:22] lb chroot_archives binary install
+P: Configuring file /etc/apt/sources.list
+Get:1 http://security.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+Get:2 http://deb.debian.org/debian bookworm InRelease [151 kB]
+Get:3 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+Get:4 http://security.debian.org/debian-security bookworm-security/non-free-firmware Sources [796 B]
+Get:5 http://security.debian.org/debian-security bookworm-security/contrib Sources [856 B]
+Get:6 http://security.debian.org/debian-security bookworm-security/main Sources [210 kB]
+Get:7 http://security.debian.org/debian-security bookworm-security/main amd64 Packages [312 kB]
+Get:8 http://security.debian.org/debian-security bookworm-security/main Translation-en [191 kB]
+Get:9 http://security.debian.org/debian-security bookworm-security/contrib amd64 Packages [896 B]
+Get:10 http://security.debian.org/debian-security bookworm-security/contrib Translation-en [652 B]
+Get:11 http://security.debian.org/debian-security bookworm-security/non-free-firmware amd64 Packages [688 B]
+Get:12 http://security.debian.org/debian-security bookworm-security/non-free-firmware Translation-en [472 B]
+Get:13 http://deb.debian.org/debian bookworm/non-free-firmware Sources [7152 B]
+Get:14 http://deb.debian.org/debian bookworm/non-free Sources [78.0 kB]
+Get:15 http://deb.debian.org/debian bookworm/contrib Sources [51.1 kB]
+Get:16 http://deb.debian.org/debian bookworm/main Sources [9490 kB]
+Get:17 http://deb.debian.org/debian bookworm/main amd64 Packages [8790 kB]
+Get:18 http://deb.debian.org/debian bookworm/main Translation-en [6107 kB]
+Get:19 http://deb.debian.org/debian bookworm/contrib amd64 Packages [53.5 kB]
+Get:20 http://deb.debian.org/debian bookworm/contrib Translation-en [48.4 kB]
+Get:21 http://deb.debian.org/debian bookworm/non-free amd64 Packages [102 kB]
+Get:22 http://deb.debian.org/debian bookworm/non-free Translation-en [68.2 kB]
+Get:23 http://deb.debian.org/debian bookworm/non-free-firmware amd64 Packages [6368 B]
+Get:24 http://deb.debian.org/debian bookworm/non-free-firmware Translation-en [20.9 kB]
+Get:25 http://deb.debian.org/debian bookworm-updates/main Sources [3288 B]
+Get:26 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [6924 B]
+Get:27 http://deb.debian.org/debian bookworm-updates/main Translation-en [5448 B]
+Fetched 25.8 MB in 2s (12.1 MB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+debian-archive-keyring is already the newest version (2023.3+deb12u2).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Hit:1 http://security.debian.org/debian-security bookworm-security InRelease
+Hit:2 http://deb.debian.org/debian bookworm InRelease
+Hit:3 http://deb.debian.org/debian bookworm-updates InRelease
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+[2026-06-12 16:47:28] lb binary_dm-verity 
+[2026-06-12 16:47:28] lb binary_manifest 
+P: Begin creating manifest...
+[2026-06-12 16:47:28] lb binary_package-lists 
+P: Begin installing local package lists...
+[2026-06-12 16:47:28] lb binary_linux-image 
+P: Begin install linux-image...
+[2026-06-12 16:47:28] lb binary_memtest 
+[2026-06-12 16:47:28] lb binary_grub-legacy 
+[2026-06-12 16:47:28] lb binary_grub-pc 
+[2026-06-12 16:47:28] lb binary_grub_cfg 
+P: Begin installing config for grub-pc and/or grub-efi, and loopback support...
+[2026-06-12 16:47:28] lb binary_syslinux 
+P: Begin installing syslinux...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Suggested packages:
+  xorriso
+The following NEW packages will be installed:
+  isolinux librsvg2-bin syslinux-common
+0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.
+Need to get 2930 kB of archives.
+After this operation, 9552 kB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian bookworm/main amd64 isolinux all 3:6.04~git20190206.bf6db5b4+dfsg1-3 [108 kB]
+Get:2 http://deb.debian.org/debian bookworm/main amd64 librsvg2-bin amd64 2.54.7+dfsg-1~deb12u1 [1584 kB]
+Get:3 http://deb.debian.org/debian bookworm/main amd64 syslinux-common all 3:6.04~git20190206.bf6db5b4+dfsg1-3 [1238 kB]
+Fetched 2930 kB in 0s (86.3 MB/s)
+Selecting previously unselected package isolinux.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45973 files and directories currently installed.)
+Preparing to unpack .../isolinux_3%3a6.04~git20190206.bf6db5b4+dfsg1-3_all.deb ...
+Unpacking isolinux (3:6.04~git20190206.bf6db5b4+dfsg1-3) ...
+Selecting previously unselected package librsvg2-bin.
+Preparing to unpack .../librsvg2-bin_2.54.7+dfsg-1~deb12u1_amd64.deb ...
+Unpacking librsvg2-bin (2.54.7+dfsg-1~deb12u1) ...
+Selecting previously unselected package syslinux-common.
+Preparing to unpack .../syslinux-common_3%3a6.04~git20190206.bf6db5b4+dfsg1-3_all.deb ...
+Unpacking syslinux-common (3:6.04~git20190206.bf6db5b4+dfsg1-3) ...
+Setting up librsvg2-bin (2.54.7+dfsg-1~deb12u1) ...
+Setting up isolinux (3:6.04~git20190206.bf6db5b4+dfsg1-3) ...
+Setting up syslinux-common (3:6.04~git20190206.bf6db5b4+dfsg1-3) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages will be REMOVED:
+  isolinux* librsvg2-bin* syslinux-common*
+0 upgraded, 0 newly installed, 3 to remove and 0 not upgraded.
+After this operation, 9552 kB disk space will be freed.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 46211 files and directories currently installed.)
+Removing isolinux (3:6.04~git20190206.bf6db5b4+dfsg1-3) ...
+Removing librsvg2-bin (2.54.7+dfsg-1~deb12u1) ...
+Removing syslinux-common (3:6.04~git20190206.bf6db5b4+dfsg1-3) ...
+[2026-06-12 16:47:30] lb binary_disk 
+P: Begin installing disk information...
+[2026-06-12 16:47:30] lb binary_loadlin 
+[2026-06-12 16:47:30] lb binary_win32-loader 
+[2026-06-12 16:47:30] lb binary_includes 
+P: Begin copying binary includes...
+[2026-06-12 16:47:30] lb binary_grub-efi 
+P: Begin preparing Grub based EFI support...
+P: UEFI Secure Boot support disabled.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Suggested packages:
+  floppyd
+The following NEW packages will be installed:
+  grub-efi-ia32-bin mtools
+0 upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
+Need to get 1670 kB of archives.
+After this operation, 16.6 MB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian bookworm/main amd64 grub-efi-ia32-bin amd64 2.06-13+deb12u2 [1468 kB]
+Get:2 http://deb.debian.org/debian bookworm/main amd64 mtools amd64 4.0.33-1+really4.0.32-1 [202 kB]
+Fetched 1670 kB in 0s (62.6 MB/s)
+Selecting previously unselected package grub-efi-ia32-bin.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45973 files and directories currently installed.)
+Preparing to unpack .../grub-efi-ia32-bin_2.06-13+deb12u2_amd64.deb ...
+Unpacking grub-efi-ia32-bin (2.06-13+deb12u2) ...
+Selecting previously unselected package mtools.
+Preparing to unpack .../mtools_4.0.33-1+really4.0.32-1_amd64.deb ...
+Unpacking mtools (4.0.33-1+really4.0.32-1) ...
+Setting up grub-efi-ia32-bin (2.06-13+deb12u2) ...
+Setting up mtools (4.0.33-1+really4.0.32-1) ...
+mkfs.fat 4.2 (2021-01-31)
+mkfs.fat 4.2 (2021-01-31)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages will be REMOVED:
+  grub-efi-ia32-bin* mtools*
+0 upgraded, 0 newly installed, 2 to remove and 0 not upgraded.
+After this operation, 16.6 MB disk space will be freed.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 46339 files and directories currently installed.)
+Removing grub-efi-ia32-bin (2.06-13+deb12u2) ...
+Removing mtools (4.0.33-1+really4.0.32-1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45974 files and directories currently installed.)
+Purging configuration files for mtools (4.0.33-1+really4.0.32-1) ...
+[2026-06-12 16:47:33] lb binary_hooks 
+P: Begin executing hooks...
+[2026-06-12 16:47:33] lb binary_checksums 
+P: Begin creating binary sha256sum.txt...
+[2026-06-12 16:47:39] lb binary_iso 
+P: Begin building binary iso image...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libburn4 libisoburn1 libisofs6 libjte2
+Suggested packages:
+  xorriso-tcltk jigit cdck
+Recommended packages:
+  syslinux-common
+The following NEW packages will be installed:
+  isolinux libburn4 libisoburn1 libisofs6 libjte2 xorriso
+0 upgraded, 6 newly installed, 0 to remove and 0 not upgraded.
+Need to get 1128 kB/1236 kB of archives.
+After this operation, 2600 kB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian bookworm/main amd64 libburn4 amd64 1.5.4-1 [166 kB]
+Get:2 http://deb.debian.org/debian bookworm/main amd64 libjte2 amd64 1.22-3 [30.0 kB]
+Get:3 http://deb.debian.org/debian bookworm/main amd64 libisofs6 amd64 1.5.4-1 [209 kB]
+Get:4 http://deb.debian.org/debian bookworm/main amd64 libisoburn1 amd64 1.5.4-4 [401 kB]
+Get:5 http://deb.debian.org/debian bookworm/main amd64 xorriso amd64 1.5.4-4 [322 kB]
+Fetched 1128 kB in 0s (9403 kB/s)
+Selecting previously unselected package isolinux.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45973 files and directories currently installed.)
+Preparing to unpack .../0-isolinux_3%3a6.04~git20190206.bf6db5b4+dfsg1-3_all.deb ...
+Unpacking isolinux (3:6.04~git20190206.bf6db5b4+dfsg1-3) ...
+Selecting previously unselected package libburn4:amd64.
+Preparing to unpack .../1-libburn4_1.5.4-1_amd64.deb ...
+Unpacking libburn4:amd64 (1.5.4-1) ...
+Selecting previously unselected package libjte2:amd64.
+Preparing to unpack .../2-libjte2_1.22-3_amd64.deb ...
+Unpacking libjte2:amd64 (1.22-3) ...
+Selecting previously unselected package libisofs6:amd64.
+Preparing to unpack .../3-libisofs6_1.5.4-1_amd64.deb ...
+Unpacking libisofs6:amd64 (1.5.4-1) ...
+Selecting previously unselected package libisoburn1:amd64.
+Preparing to unpack .../4-libisoburn1_1.5.4-4_amd64.deb ...
+Unpacking libisoburn1:amd64 (1.5.4-4) ...
+Selecting previously unselected package xorriso.
+Preparing to unpack .../5-xorriso_1.5.4-4_amd64.deb ...
+Unpacking xorriso (1.5.4-4) ...
+Setting up isolinux (3:6.04~git20190206.bf6db5b4+dfsg1-3) ...
+Setting up libjte2:amd64 (1.22-3) ...
+Setting up libburn4:amd64 (1.5.4-1) ...
+Setting up libisofs6:amd64 (1.5.4-1) ...
+Setting up libisoburn1:amd64 (1.5.4-4) ...
+Setting up xorriso (1.5.4-4) ...
+Processing triggers for libc-bin (2.36-9+deb12u14) ...
+xorriso 1.5.4 : RockRidge filesystem manipulator, libburnia project.
+
+xorriso : NOTE : Environment variable SOURCE_DATE_EPOCH encountered with value 1781281946
+Drive current: -outdev 'stdio:zenvx-os-amd64.hybrid.iso'
+Media current: stdio file, overwriteable
+Media status : is blank
+Media summary: 0 sessions, 0 data blocks, 0 data, 81.5g free
+xorriso : NOTE : -as mkisofs: Ignored option '-cache-inodes'
+xorriso : WARNING : -volid text does not comply to ISO 9660 / ECMA 119 rules
+Added to ISO image: directory '/'='/binary'
+xorriso : UPDATE :     564 files added in 1 seconds
+xorriso : UPDATE :     564 files added in 1 seconds
+xorriso : NOTE : Copying to System Area: 432 bytes from file '/usr/lib/ISOLINUX/isohdpfx.bin'
+libisofs: NOTE : Automatically adjusted MBR geometry to 1018/95/32
+libisofs: NOTE : Aligned image size to cylinder size by 657 blocks
+xorriso : UPDATE :  9.31% done
+xorriso : UPDATE :  76.09% done
+ISO image produced: 773680 sectors
+Written to medium : 773680 sectors at LBA 0
+Writing to 'stdio:zenvx-os-amd64.hybrid.iso' completed successfully.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages will be REMOVED:
+  isolinux* libburn4* libisoburn1* libisofs6* libjte2* xorriso*
+0 upgraded, 0 newly installed, 6 to remove and 0 not upgraded.
+After this operation, 2600 kB disk space will be freed.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 46046 files and directories currently installed.)
+Removing isolinux (3:6.04~git20190206.bf6db5b4+dfsg1-3) ...
+Removing xorriso (1.5.4-4) ...
+Removing libisoburn1:amd64 (1.5.4-4) ...
+Removing libburn4:amd64 (1.5.4-1) ...
+Removing libisofs6:amd64 (1.5.4-1) ...
+Removing libjte2:amd64 (1.22-3) ...
+Processing triggers for libc-bin (2.36-9+deb12u14) ...
+[2026-06-12 16:47:43] lb binary_onie 
+[2026-06-12 16:47:43] lb binary_netboot 
+[2026-06-12 16:47:43] lb binary_tar 
+[2026-06-12 16:47:43] lb binary_hdd 
+[2026-06-12 16:47:43] lb binary_zsync 
+P: Begin building zsync control files...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  zsync
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 76.5 kB of archives.
+After this operation, 228 kB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian bookworm/main amd64 zsync amd64 0.6.2-5 [76.5 kB]
+Fetched 76.5 kB in 0s (3560 kB/s)
+Selecting previously unselected package zsync.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45973 files and directories currently installed.)
+Preparing to unpack .../zsync_0.6.2-5_amd64.deb ...
+Unpacking zsync (0.6.2-5) ...
+Setting up zsync (0.6.2-5) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages will be REMOVED:
+  zsync*
+0 upgraded, 0 newly installed, 1 to remove and 0 not upgraded.
+After this operation, 228 kB disk space will be freed.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45982 files and directories currently installed.)
+Removing zsync (0.6.2-5) ...
+[2026-06-12 16:47:49] lb chroot_prep remove dpkg tmpfs sysv-rc hosts resolv hostname apt
+[2026-06-12 16:47:49] lb chroot_apt remove
+P: Deconfiguring file /etc/apt/apt.conf
+[2026-06-12 16:47:49] lb chroot_hostname remove
+P: Deconfiguring file /etc/hostname
+P: Deconfiguring file /bin/hostname
+[2026-06-12 16:47:50] lb chroot_resolv remove
+P: Deconfiguring file /etc/resolv.conf
+[2026-06-12 16:47:50] lb chroot_hosts remove
+P: Deconfiguring file /etc/hosts
+[2026-06-12 16:47:50] lb chroot_sysv-rc remove
+P: Deconfiguring file /usr/sbin/policy-rc.d
+[2026-06-12 16:47:50] lb chroot_tmpfs remove
+[2026-06-12 16:47:50] lb chroot_dpkg remove
+P: Deconfiguring file /sbin/start-stop-daemon
+[2026-06-12 16:47:50] lb chroot_prep remove devpts proc selinuxfs sysfs
+[2026-06-12 16:47:50] lb chroot_sysfs remove
+P: Begin unmounting /sys...
+[2026-06-12 16:47:50] lb chroot_selinuxfs remove
+[2026-06-12 16:47:50] lb chroot_proc remove
+P: Begin unmounting /proc...
+[2026-06-12 16:47:50] lb chroot_devpts remove
+P: Begin unmounting /dev/pts...
+P: Binary stage completed
+P: Begin unmounting filesystems...
+P: Saving caches...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+[2026-06-12 16:47:50] lb source 
+P: Source stage disabled, skipping
+P: Build completed successfully
