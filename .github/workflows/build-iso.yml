@@ -4,6 +4,10 @@ name: Build ZenvX OS ISO
 # live-build, then publishes the ISO as a workflow artifact and (on tags) a
 # GitHub Release. Running inside Debian avoids the Ubuntu runner's stale
 # live-build defaults (which tried to bootstrap Ubuntu 'precise').
+#
+# On every run the full build log is committed back to ci-logs/ so it can be
+# inspected directly from the repository (path is outside the trigger paths and
+# the commit is marked [skip ci], so this does not loop).
 
 on:
   push:
@@ -42,6 +46,7 @@ jobs:
             grub-pc-bin grub-efi-amd64-bin mtools \
             dosfstools ca-certificates curl git debian-archive-keyring procps
           lb --version || true
+          echo 'Free disk space:'; df -h
 
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -70,7 +75,32 @@ jobs:
             grep -nE '^(E|W):' build.log | tail -n 80 || true
             echo "===================== last 200 lines of build.log =================="
             tail -n 200 build.log
-            exit "$status"
+          fi
+          echo "$status" > build.status
+
+      - name: Commit build log back to repo (for diagnosis)
+        if: always()
+        shell: bash
+        run: |
+          set -ux
+          git config --global --add safe.directory '*'
+          git config user.name 'zenvx-ci'
+          git config user.email 'ci@users.noreply.github.com'
+          mkdir -p ci-logs
+          cp zenvx-iso/build.log ci-logs/latest-build.log 2>/dev/null || echo 'no build.log produced' > ci-logs/latest-build.log
+          tail -c 250000 zenvx-iso/build.log > ci-logs/latest-build.tail.log 2>/dev/null || true
+          cp zenvx-iso/build.status ci-logs/latest-build.status 2>/dev/null || true
+          git add ci-logs/latest-build.log ci-logs/latest-build.tail.log ci-logs/latest-build.status || true
+          git commit -m 'ci: build log [skip ci]' || echo 'nothing to commit'
+          git push origin HEAD:main || echo 'push failed'
+
+      - name: Fail job if build failed
+        shell: bash
+        run: |
+          status=$(cat zenvx-iso/build.status 2>/dev/null || echo 1)
+          if [ "$status" != "0" ]; then
+            echo "lb build failed with status $status"
+            exit 1
           fi
 
       - name: Locate and rename the ISO
@@ -80,10 +110,7 @@ jobs:
           set -eu
           ISO=$(ls -1 *.iso live-image-*.iso 2>/dev/null | head -n1 || true)
           if [ -z "$ISO" ]; then
-            echo "No ISO produced! Scanning build.log for errors:"
-            grep -nE '^(E|W):' build.log | tail -n 80 || true
-            echo "--- last 120 lines ---"
-            tail -n 120 build.log || true
+            echo "No ISO produced!"
             ls -la
             exit 1
           fi
@@ -103,7 +130,7 @@ jobs:
           retention-days: 30
           if-no-files-found: error
 
-      - name: Upload build log
+      - name: Upload build log artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:

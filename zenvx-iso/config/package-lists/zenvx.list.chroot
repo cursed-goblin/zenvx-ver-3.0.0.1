@@ -13,11 +13,8 @@ sudo
 grub-efi-amd64
 grub-pc-bin
 grub2-common
-shim-signed
 os-prober
-firmware-linux
 firmware-linux-free
-firmware-linux-nonfree
 firmware-misc-nonfree
 amd64-microcode
 intel-microcode
@@ -34,9 +31,8 @@ less
 vim-tiny
 nano
 
-# --- Networking ---
+# --- Networking (CLI only, no GUI) ---
 network-manager
-network-manager-gnome
 wpasupplicant
 wireless-tools
 iw
@@ -65,9 +61,8 @@ libvulkan1
 mesa-vulkan-drivers
 nvidia-detect
 
-# --- Filesystem and storage ---
+# --- Filesystem and storage (CLI only) ---
 parted
-gparted
 dosfstools
 e2fsprogs
 cryptsetup
