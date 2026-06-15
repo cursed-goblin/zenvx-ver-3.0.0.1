@@ -1,0 +1,65 @@
+#!/bin/sh
+# 0310-zenvx-gnome-finalize.hook.chroot
+# Enables GNOME login (GDM), autologin, and autostarts AGS + daemon.
+set -e
+
+echo "[zenvx 0310] === finalizing GNOME desktop ==="
+
+FRONTEND="/opt/zenvx/frontend"
+install -d -m 0755 /etc/xdg/autostart
+
+# Autostart AGS (entrypoint: ags/config.js)
+cat > /etc/xdg/autostart/zenvx-ags.desktop <<'XEOF'
+[Desktop Entry]
+Type=Application
+Name=ZenvX Shell UI (AGS)
+Comment=Dock/Spotlight/Control Center (AGS)
+Exec=sh -lc 'ags -c /opt/zenvx/frontend/ags/config.js'
+X-GNOME-Autostart-enabled=true
+NoDisplay=true
+XEOF
+
+# Autostart daemon (entrypoint: daemon/macprlandd.py)
+cat > /etc/xdg/autostart/zenvx-macprlandd.desktop <<'XEOF'
+[Desktop Entry]
+Type=Application
+Name=ZenvX Rules Daemon (macprlandd)
+Comment=Rules engine + automation daemon
+Exec=sh -lc 'python3 /opt/zenvx/frontend/daemon/macprlandd.py'
+X-GNOME-Autostart-enabled=true
+NoDisplay=true
+XEOF
+
+chmod -R a+rX "${FRONTEND}" 2>/dev/null || true
+
+# Propagate /etc/skel into the live user home
+SKEL=/etc/skel
+HOME_DIR=/home/zenvx
+if id zenvx >/dev/null 2>&1; then
+  cp -a "${SKEL}/.config" "${HOME_DIR}/" 2>/dev/null || true
+  cp -a "${SKEL}/.local" "${HOME_DIR}/" 2>/dev/null || true
+  chown -R zenvx:zenvx "${HOME_DIR}" 2>/dev/null || true
+fi
+
+# Enable GDM + graphical boot
+systemctl enable gdm3.service 2>/dev/null || true
+systemctl set-default graphical.target 2>/dev/null || true
+
+# GDM autologin config (Debian)
+install -d -m 0755 /etc/gdm3
+cat > /etc/gdm3/daemon.conf <<'XEOF'
+[daemon]
+AutomaticLoginEnable=true
+AutomaticLogin=zenvx
+WaylandEnable=true
+
+[security]
+
+[xdmcp]
+
+[chooser]
+
+[debug]
+XEOF
+
+echo "[zenvx 0310] GNOME finalize complete"

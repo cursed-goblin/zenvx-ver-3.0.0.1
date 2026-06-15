@@ -1,0 +1,39 @@
+#!/bin/sh
+# 0390-zenvx-frontend-verify.hook.chroot
+# HARD GATE: fail build if XFCE/LightDM/Plank/picom remnants exist.
+set -e
+
+echo "[zenvx 0390] === verifying frontend swap (no leftovers) ==="
+
+fail() {
+  echo "[zenvx 0390] ERROR: $1"
+  exit 1
+}
+
+# No old packages
+if dpkg -l | awk '{print $2}' | grep -E '^(lightdm|xfce4|xfwm4|xfconf|plank|picom)($|-)' >/dev/null 2>&1; then
+  echo "[zenvx 0390] Found forbidden packages:"
+  dpkg -l | awk '{print $2}' | grep -E '^(lightdm|xfce4|xfwm4|xfconf|plank|picom)($|-)'
+  fail "Old frontend packages present"
+fi
+
+# No LightDM config directory
+[ ! -d /etc/lightdm ] || fail "/etc/lightdm exists (LightDM leftovers)"
+
+# GNOME components must exist
+command -v gnome-shell >/dev/null 2>&1 || fail "gnome-shell not installed"
+systemctl is-enabled gdm3.service >/dev/null 2>&1 || fail "gdm3.service not enabled"
+
+# Extension must be installed system-wide
+EXT_UUID="macprland-shell@zenvx"
+[ -f "/usr/share/gnome-shell/extensions/${EXT_UUID}/metadata.json" ] || fail "GNOME extension metadata.json missing"
+
+# Autostart entries must exist
+[ -f /etc/xdg/autostart/zenvx-ags.desktop ] || fail "AGS autostart missing"
+[ -f /etc/xdg/autostart/zenvx-macprlandd.desktop ] || fail "macprlandd autostart missing"
+
+# Payload must exist
+[ -f /opt/zenvx/frontend/ags/config.js ] || fail "AGS config.js missing"
+[ -f /opt/zenvx/frontend/daemon/macprlandd.py ] || fail "macprlandd.py missing"
+
+echo "[zenvx 0390] OK: frontend swap verified"

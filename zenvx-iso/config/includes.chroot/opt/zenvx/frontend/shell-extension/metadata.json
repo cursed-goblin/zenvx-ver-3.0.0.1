@@ -1,0 +1,7 @@
+{
+  "uuid": "macprland-shell@zenvx",
+  "name": "Macprland Shell",
+  "description": "ZenVX frontend shell extension scaffold (Mission Control, DBus bridge, tiling hooks)",
+  "shell-version": ["45", "46"],
+  "version": 0
+}

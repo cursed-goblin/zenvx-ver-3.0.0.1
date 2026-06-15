@@ -1,0 +1,38 @@
+#!/bin/sh
+# 0300-zenvx-gnome-frontend.hook.chroot
+# Installs GNOME Shell extension + frontend payload (AGS + daemon) into the image.
+set -e
+
+echo "[zenvx 0300] === installing GNOME frontend payload ==="
+
+FRONTEND_SRC="/opt/zenvx/frontend"
+EXT_UUID="macprland-shell@zenvx"
+EXT_DST="/usr/share/gnome-shell/extensions/${EXT_UUID}"
+
+# Ensure payload exists (baked via includes.chroot)
+if [ ! -f "${FRONTEND_SRC}/ags/config.js" ]; then
+  echo "[zenvx 0300] ERROR: missing ${FRONTEND_SRC}/ags/config.js"
+  exit 1
+fi
+if [ ! -f "${FRONTEND_SRC}/daemon/macprlandd.py" ]; then
+  echo "[zenvx 0300] ERROR: missing ${FRONTEND_SRC}/daemon/macprlandd.py"
+  exit 1
+fi
+if [ ! -f "${FRONTEND_SRC}/shell-extension/metadata.json" ]; then
+  echo "[zenvx 0300] ERROR: missing ${FRONTEND_SRC}/shell-extension/metadata.json"
+  exit 1
+fi
+
+# Install GNOME Shell extension system-wide
+install -d -m 0755 "${EXT_DST}"
+cp -a "${FRONTEND_SRC}/shell-extension/." "${EXT_DST}/"
+chmod -R a+rX "${EXT_DST}"
+
+echo "[zenvx 0300] installed extension to ${EXT_DST}"
+
+# Provide macprland config skeleton for the live user
+install -d -m 0755 /etc/skel/.config/macprland/scripts
+: > /etc/skel/.config/macprland/config.yml
+: > /etc/skel/.config/macprland/rules.yml
+
+echo "[zenvx 0300] frontend payload install done"

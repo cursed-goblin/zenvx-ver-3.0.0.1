@@ -1,64 +1,30 @@
-# ZenvX OS — macOS-style desktop (GUI layer)
-# Installed into the live chroot in addition to zenvx.list.chroot.
+# ZenvX OS — GNOME (Wayland) frontend (GUI layer)
+# Replaces the old XFCE/LightDM/Plank/picom frontend.
 
-# --- X server ---
-xorg
-xserver-xorg
-xinit
-x11-xserver-utils
+# --- Display manager (Wayland-friendly) ---
+gdm3
 
-# --- Display manager + greeter ---
-lightdm
-lightdm-gtk-greeter
+# --- GNOME session / shell / compositor ---
+gnome-session
+gnome-shell
+mutter
+gnome-control-center
 
 # --- Session infrastructure ---
 dbus-user-session
 policykit-1
 
-# --- XFCE desktop ---
-xfce4-session
-xfwm4
-xfdesktop4
-xfce4-panel
-xfce4-settings
-xfconf
-xsettingsd
-thunar
-thunar-archive-plugin
-tumbler
-xfce4-terminal
-xfce4-whiskermenu-plugin
-xfce4-pulseaudio-plugin
-xfce4-power-manager
-xfce4-notifyd
-xfce4-screenshooter
+# --- GJS + GTK bits (needed by extensions / JS stacks) ---
+gjs
+gir1.2-gtk-3.0
+gir1.2-glib-2.0
+gir1.2-gio-2.0
 
-# --- macOS look: dock + compositor ---
-plank
-picom
-
-# --- GTK theme build dependencies ---
-sassc
-gtk2-engines-murrine
-gnome-themes-extra
-dconf-cli
-dconf-gsettings-backend
-libglib2.0-bin
-
-# --- Icons, cursors, fonts ---
-papirus-icon-theme
-adwaita-icon-theme
-fonts-cantarell
-fonts-firacode
-fonts-noto-color-emoji
-fonts-dejavu
-
-# --- Desktop apps for the dock ---
-firefox-esr
-mousepad
-ristretto
-
-# --- Tray + wallpaper tooling ---
+# --- Networking UI (common GNOME expectation) ---
 network-manager-gnome
-imagemagick
-feh
+
+# --- AGS runtime ---
+ags
+
+# --- Python daemon deps (avoid pip during build if possible) ---
+python3-yaml
