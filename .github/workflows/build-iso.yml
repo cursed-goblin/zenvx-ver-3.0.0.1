@@ -1,13 +1,5 @@
 name: Build ZenvX OS ISO
 
-# Builds the live ISO inside a privileged Debian bookworm container using
-# live-build, then publishes the ISO as a workflow artifact AND a GitHub
-# Release (tag v1.0.0) so it has a fast, permanent, CDN-backed download link.
-# Running inside Debian avoids the Ubuntu runner's stale live-build defaults.
-#
-# On every run the full build log is committed back to ci-logs/ (as .txt, with
-# git add -f so it survives the *.log gitignore rule) for direct inspection.
-
 on:
   push:
     branches: [main, master]
@@ -25,8 +17,6 @@ on:
 permissions:
   contents: write
 
-# GitHub is deprecating Node.js 20 for JS-based actions.
-# Opt into Node.js 24 runtime now to avoid future breakage.
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
 
@@ -54,6 +44,16 @@ jobs:
 
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Print build target commit
+        shell: bash
+        run: |
+          set -eux
+          echo "GITHUB_SHA=$GITHUB_SHA"
+          git rev-parse HEAD
+          git log -1 --oneline
 
       - name: Stage ZenvX application source into the image
         shell: bash
@@ -61,10 +61,7 @@ jobs:
           set -eux
           dest=zenvx-iso/config/includes.chroot/opt/zenvx
           mkdir -p "$dest"
-          # Copy the entire python application tree to /opt/zenvx inside the image.
           cp -a zenvx-os/. "$dest"/
-          echo 'Staged source tree:'
-          find "$dest" -type f | sort
 
       - name: Make build scripts executable
         working-directory: zenvx-iso
@@ -88,27 +85,44 @@ jobs:
           echo "$status" > build.status
           if [ "$status" -ne 0 ]; then
             echo "===================== live-build errors (E:/W:) ====================="
-            grep -nE '^(E|W):' build.log | tail -n 80 || true
+            grep -nE '^(E|W):' build.log | tail -n 200 || true
             echo "===================== last 200 lines of build.log =================="
-            tail -n 200 build.log
+            tail -n 200 build.log || true
           fi
+
+      - name: Upload build logs (always)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-log
+          path: |
+            zenvx-iso/build.log
+            zenvx-iso/build.status
+          if-no-files-found: ignore
 
       - name: Commit build log back to repo (for diagnosis)
         if: always()
         shell: bash
+        env:
+          GH_TOKEN: $ secrets.GITHUB_TOKEN 
         run: |
-          set -ux
+          set -eux
           git config --global --add safe.directory '*'
           git config user.name 'zenvx-ci'
           git config user.email 'ci@users.noreply.github.com'
+
           mkdir -p ci-logs
           cp zenvx-iso/build.log ci-logs/latest-build.txt 2>/dev/null || echo 'no build.log produced' > ci-logs/latest-build.txt
           tail -c 250000 zenvx-iso/build.log > ci-logs/latest-build.tail.txt 2>/dev/null || true
           cp zenvx-iso/build.status ci-logs/latest-build.status 2>/dev/null || true
           grep -nE '^(E|W):' zenvx-iso/build.log | tail -n 200 > ci-logs/latest-build.error.txt 2>/dev/null || true
+
           git add -f ci-logs/latest-build.txt ci-logs/latest-build.tail.txt ci-logs/latest-build.status ci-logs/latest-build.error.txt || true
-          git commit -m 'ci: build log [skip ci]' || echo 'nothing to commit'
-          git push origin HEAD:main || echo 'push failed'
+          git commit -m 'ci: build log [skip ci]' || true
+
+          # Ensure push works inside container by embedding token in remote.
+          git remote set-url origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push origin HEAD:main || true
 
       - name: Fail job if build failed
         shell: bash
@@ -146,14 +160,6 @@ jobs:
           retention-days: 30
           if-no-files-found: error
 
-      - name: Upload build log artifact
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: build-log
-          path: zenvx-iso/build.log
-          if-no-files-found: ignore
-
       - name: Publish GitHub Release
         if: github.event_name != 'pull_request'
         uses: softprops/action-gh-release@v2
@@ -167,11 +173,5 @@ jobs:
           body: |
             Automated ZenvX OS live ISO build.
 
-            - Privacy-first, local-AI Debian 12 live ISO
-            - Hybrid BIOS + UEFI bootable image
-            - SHA256 checksum attached
-
             Flash to USB (Linux/macOS):
             `sudo dd if=zenvx-os-v1.0.0-amd64.iso of=/dev/sdX bs=4M status=progress oflag=sync`
-
-            Or use Rufus / balenaEtcher on Windows.
