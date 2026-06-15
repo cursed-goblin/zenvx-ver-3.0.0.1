@@ -25,6 +25,11 @@ on:
 permissions:
   contents: write
 
+# GitHub is deprecating Node.js 20 for JS-based actions.
+# Opt into Node.js 24 runtime now to avoid future breakage.
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
 jobs:
   build-iso:
     name: Build ISO (live-build, Debian container)
@@ -100,7 +105,8 @@ jobs:
           cp zenvx-iso/build.log ci-logs/latest-build.txt 2>/dev/null || echo 'no build.log produced' > ci-logs/latest-build.txt
           tail -c 250000 zenvx-iso/build.log > ci-logs/latest-build.tail.txt 2>/dev/null || true
           cp zenvx-iso/build.status ci-logs/latest-build.status 2>/dev/null || true
-          git add -f ci-logs/latest-build.txt ci-logs/latest-build.tail.txt ci-logs/latest-build.status || true
+          grep -nE '^(E|W):' zenvx-iso/build.log | tail -n 200 > ci-logs/latest-build.error.txt 2>/dev/null || true
+          git add -f ci-logs/latest-build.txt ci-logs/latest-build.tail.txt ci-logs/latest-build.status ci-logs/latest-build.error.txt || true
           git commit -m 'ci: build log [skip ci]' || echo 'nothing to commit'
           git push origin HEAD:main || echo 'push failed'
 
