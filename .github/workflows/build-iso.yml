@@ -47,6 +47,13 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Configure git safe.directory
+        shell: bash
+        run: |
+          set -eux
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git config --global --add safe.directory '*'
+
       - name: Print build target commit
         shell: bash
         run: |
@@ -107,7 +114,6 @@ jobs:
           GH_TOKEN: $ secrets.GITHUB_TOKEN 
         run: |
           set -eux
-          git config --global --add safe.directory '*'
           git config user.name 'zenvx-ci'
           git config user.email 'ci@users.noreply.github.com'
 
@@ -120,7 +126,6 @@ jobs:
           git add -f ci-logs/latest-build.txt ci-logs/latest-build.tail.txt ci-logs/latest-build.status ci-logs/latest-build.error.txt || true
           git commit -m 'ci: build log [skip ci]' || true
 
-          # Ensure push works inside container by embedding token in remote.
           git remote set-url origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git push origin HEAD:main || true
 
