@@ -17,6 +17,8 @@ on:
 permissions:
   contents: write
 
+# GitHub is deprecating Node.js 20 for JS-based actions.
+# Opt into Node.js 24 runtime now to avoid future breakage.
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
 
@@ -51,7 +53,9 @@ jobs:
         shell: bash
         run: |
           set -eux
+          # Required when running git inside container jobs; ownership may differ.
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          # Extra safety net (keeps builds from randomly failing on different runners)
           git config --global --add safe.directory '*'
 
       - name: Print build target commit
@@ -111,7 +115,8 @@ jobs:
         if: always()
         shell: bash
         env:
-          GH_TOKEN: $ secrets.GITHUB_TOKEN 
+          # Use the repo-scoped token provided by Actions.
+          GH_TOKEN: $ github.token 
         run: |
           set -eux
           git config user.name 'zenvx-ci'
